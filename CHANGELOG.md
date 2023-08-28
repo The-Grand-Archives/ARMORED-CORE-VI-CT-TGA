@@ -1,5 +1,7 @@
 # Changelog
 ## [Unreleased]
+
+## [v0.1.0] - 2023-08-28
 ### Added
  - Main table functionality ported from DS3/ER, mostly by ametalon, dasaav, and tremwil
  - Some features directly ported from DS3/ER tables (ParamUtils and most of GameData)
