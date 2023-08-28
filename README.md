@@ -73,7 +73,7 @@ I expect you to already have Steam, Wine, Proton, and the game installed
 The Grand Archives | Reason
 ------------- | ---------------------
 Ametalon | Table contributions (DS3)
-[LukeYi](https://github.com/LukeYui) | AddItem function, char flags
+[LukeYui](https://github.com/LukeYui) | AddItem function, char flags
 [Dasaav](https://github.com/Dasaav-dsv) | Table contributions (DS3/ER)
 [inuNorii](https://github.com/inuNorii) | Porting, maintaining, research
 [tremwil](https://github.com/tremwil/) | FD4Singleton finder and more
