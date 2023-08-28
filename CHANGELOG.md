@@ -1,5 +1,8 @@
 # Changelog
 ## [Unreleased]
+### Added
+ - Bullet_NpcHelper
+ - OS Tuning, with scripts to max or reset all
 
 ## [v0.1.0] - 2023-08-28
 ### Added

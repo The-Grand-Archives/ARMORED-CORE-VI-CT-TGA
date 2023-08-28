@@ -2281,21 +2281,21 @@ Credits are listed on the Github!
                         <CheatEntry>
                           <ID>1337271468</ID>
                           <Description>"ID"</Description>
-                          <ShowAsSigned>0</ShowAsSigned>
+                          <ShowAsSigned>1</ShowAsSigned>
                           <VariableType>4 Bytes</VariableType>
                           <Address>+20</Address>
                         </CheatEntry>
                         <CheatEntry>
                           <ID>1337271463</ID>
                           <Description>"Ammo"</Description>
-                          <ShowAsSigned>0</ShowAsSigned>
+                          <ShowAsSigned>1</ShowAsSigned>
                           <VariableType>4 Bytes</VariableType>
                           <Address>+58</Address>
                         </CheatEntry>
                         <CheatEntry>
                           <ID>1337271465</ID>
                           <Description>"MaxAmmo"</Description>
-                          <ShowAsSigned>0</ShowAsSigned>
+                          <ShowAsSigned>1</ShowAsSigned>
                           <VariableType>4 Bytes</VariableType>
                           <Address>+5C</Address>
                         </CheatEntry>
@@ -2352,21 +2352,21 @@ Credits are listed on the Github!
                         <CheatEntry>
                           <ID>1337271498</ID>
                           <Description>"ID"</Description>
-                          <ShowAsSigned>0</ShowAsSigned>
+                          <ShowAsSigned>1</ShowAsSigned>
                           <VariableType>4 Bytes</VariableType>
                           <Address>+20</Address>
                         </CheatEntry>
                         <CheatEntry>
                           <ID>1337271497</ID>
                           <Description>"Ammo"</Description>
-                          <ShowAsSigned>0</ShowAsSigned>
+                          <ShowAsSigned>1</ShowAsSigned>
                           <VariableType>4 Bytes</VariableType>
                           <Address>+58</Address>
                         </CheatEntry>
                         <CheatEntry>
                           <ID>1337271469</ID>
                           <Description>"MaxAmmo"</Description>
-                          <ShowAsSigned>0</ShowAsSigned>
+                          <ShowAsSigned>1</ShowAsSigned>
                           <VariableType>4 Bytes</VariableType>
                           <Address>+5C</Address>
                         </CheatEntry>
@@ -2423,21 +2423,21 @@ Credits are listed on the Github!
                         <CheatEntry>
                           <ID>1337271499</ID>
                           <Description>"ID"</Description>
-                          <ShowAsSigned>0</ShowAsSigned>
+                          <ShowAsSigned>1</ShowAsSigned>
                           <VariableType>4 Bytes</VariableType>
                           <Address>+20</Address>
                         </CheatEntry>
                         <CheatEntry>
                           <ID>1337271475</ID>
                           <Description>"Ammo"</Description>
-                          <ShowAsSigned>0</ShowAsSigned>
+                          <ShowAsSigned>1</ShowAsSigned>
                           <VariableType>4 Bytes</VariableType>
                           <Address>+58</Address>
                         </CheatEntry>
                         <CheatEntry>
                           <ID>1337271476</ID>
                           <Description>"MaxAmmo"</Description>
-                          <ShowAsSigned>0</ShowAsSigned>
+                          <ShowAsSigned>1</ShowAsSigned>
                           <VariableType>4 Bytes</VariableType>
                           <Address>+5C</Address>
                         </CheatEntry>
@@ -2494,21 +2494,21 @@ Credits are listed on the Github!
                         <CheatEntry>
                           <ID>1337271500</ID>
                           <Description>"ID"</Description>
-                          <ShowAsSigned>0</ShowAsSigned>
+                          <ShowAsSigned>1</ShowAsSigned>
                           <VariableType>4 Bytes</VariableType>
                           <Address>+20</Address>
                         </CheatEntry>
                         <CheatEntry>
                           <ID>1337271478</ID>
                           <Description>"Ammo"</Description>
-                          <ShowAsSigned>0</ShowAsSigned>
+                          <ShowAsSigned>1</ShowAsSigned>
                           <VariableType>4 Bytes</VariableType>
                           <Address>+58</Address>
                         </CheatEntry>
                         <CheatEntry>
                           <ID>1337271479</ID>
                           <Description>"MaxAmmo"</Description>
-                          <ShowAsSigned>0</ShowAsSigned>
+                          <ShowAsSigned>1</ShowAsSigned>
                           <VariableType>4 Bytes</VariableType>
                           <Address>+5C</Address>
                         </CheatEntry>
@@ -2710,6 +2710,382 @@ end
                       <ID>1337213390</ID>
                       <Description>"======================================"</Description>
                       <GroupHeader>1</GroupHeader>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>1337271638</ID>
+                  <Description>"OS Tuning"</Description>
+                  <Options moHideChildren="1"/>
+                  <GroupHeader>1</GroupHeader>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>1337271663</ID>
+                      <Description>"Max all"</Description>
+                      <Color>FF8000</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>{$lua}
+if not syntaxcheck then disableMemrec(memrec) end
+{$asm}
+[ENABLE]
+[[[GameDataMan]+8]+1368]+00:
+dd 5  // Kinetic Weapons - Fire Control Tuning
+dd 5  // Energy Weapons - Output Control Tuning
+dd 5  // Explosive Weapons - Fuse Control Tuning
+dd 3  // Melee Weapons - Drive Control Tuning
+dd 3  // Direct Hit Modifier - Damage Tuning
+dd 5  // ACS - Dynamic Deflection Control Tuning
+
+[[[GameDataMan]+8]+1368]+24:
+dd 4  // Repair Kits - Optimization
+dd 2  // Access Speed - Optimization
+dd 1  // Weight Control
+dd 3  // Assault Armor
+dd 2  // Pulse Armor
+dd 3  // Pulse Protection
+dd 1  // Terminal Armor
+dd 1  // Boost Kick
+dd 1  // Manual Aiming
+dd 1  // Weapon Bay
+dd 1  // Quick Turns
+
+[DISABLE]
+
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271664</ID>
+                      <Description>"Reset all"</Description>
+                      <Color>FF8000</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>{$lua}
+if not syntaxcheck then disableMemrec(memrec) end
+{$asm}
+[ENABLE]
+[[[GameDataMan]+8]+1368]+00:
+dd 0  // Kinetic Weapons - Fire Control Tuning
+dd 0  // Energy Weapons - Output Control Tuning
+dd 0  // Explosive Weapons - Fuse Control Tuning
+dd 0  // Melee Weapons - Drive Control Tuning
+dd 0  // Direct Hit Modifier - Damage Tuning
+dd 0  // ACS - Dynamic Deflection Control Tuning
+
+[[[GameDataMan]+8]+1368]+24:
+dd 0  // Repair Kits - Optimization
+dd 0  // Access Speed - Optimization
+dd 0  // Weight Control
+dd 0  // Assault Armor
+dd 0  // Pulse Armor
+dd 0  // Pulse Protection
+dd 0  // Terminal Armor
+dd 0  // Boost Kick
+dd 0  // Manual Aiming
+dd 0  // Weapon Bay
+dd 0  // Quick Turns
+
+[DISABLE]
+
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271641</ID>
+                      <Description>"System Unlocks"</Description>
+                      <GroupHeader>1</GroupHeader>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>1337271651</ID>
+                          <Description>"Weight Control"</Description>
+                          <DropDownListLink>ACTIVE_INACTIVE</DropDownListLink>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>GameDataMan</Address>
+                          <Offsets>
+                            <Offset>2C</Offset>
+                            <Offset>1368</Offset>
+                            <Offset>8</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337271640</ID>
+                          <Description>"Boost Kick"</Description>
+                          <DropDownListLink>ACTIVE_INACTIVE</DropDownListLink>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>GameDataMan</Address>
+                          <Offsets>
+                            <Offset>40</Offset>
+                            <Offset>1368</Offset>
+                            <Offset>8</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337271642</ID>
+                          <Description>"Manual Aiming"</Description>
+                          <DropDownListLink>ACTIVE_INACTIVE</DropDownListLink>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>GameDataMan</Address>
+                          <Offsets>
+                            <Offset>44</Offset>
+                            <Offset>1368</Offset>
+                            <Offset>8</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337271639</ID>
+                          <Description>"Weapon Bay"</Description>
+                          <DropDownListLink>ACTIVE_INACTIVE</DropDownListLink>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>GameDataMan</Address>
+                          <Offsets>
+                            <Offset>48</Offset>
+                            <Offset>1368</Offset>
+                            <Offset>8</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337271643</ID>
+                          <Description>"Quick Turn"</Description>
+                          <DropDownListLink>ACTIVE_INACTIVE</DropDownListLink>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>GameDataMan</Address>
+                          <Offsets>
+                            <Offset>4C</Offset>
+                            <Offset>1368</Offset>
+                            <Offset>8</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271644</ID>
+                      <Description>"Core Expansions"</Description>
+                      <GroupHeader>1</GroupHeader>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>1337271645</ID>
+                          <Description>"Assault Armor"</Description>
+                          <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:Inactive
+1:1
+2:2
+3:3
+</DropDownList>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>GameDataMan</Address>
+                          <Offsets>
+                            <Offset>30</Offset>
+                            <Offset>1368</Offset>
+                            <Offset>8</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337271646</ID>
+                          <Description>"Pulse Armor"</Description>
+                          <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:Inactive
+1:1
+2:2
+</DropDownList>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>GameDataMan</Address>
+                          <Offsets>
+                            <Offset>34</Offset>
+                            <Offset>1368</Offset>
+                            <Offset>8</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337271647</ID>
+                          <Description>"Pulse Protection"</Description>
+                          <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:Inactive
+1:1
+2:2
+3:3
+</DropDownList>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>GameDataMan</Address>
+                          <Offsets>
+                            <Offset>38</Offset>
+                            <Offset>1368</Offset>
+                            <Offset>8</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337271648</ID>
+                          <Description>"Terminal Armor"</Description>
+                          <DropDownListLink>ACTIVE_INACTIVE</DropDownListLink>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>GameDataMan</Address>
+                          <Offsets>
+                            <Offset>3C</Offset>
+                            <Offset>1368</Offset>
+                            <Offset>8</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271649</ID>
+                      <Description>"Attack Control"</Description>
+                      <GroupHeader>1</GroupHeader>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>1337271637</ID>
+                          <Description>"Kinetic Weapons - Fire Control Tuning"</Description>
+                          <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:Inactive
+1:1
+2:2
+3:3
+4:4
+5:5
+</DropDownList>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>GameDataMan</Address>
+                          <Offsets>
+                            <Offset>0</Offset>
+                            <Offset>1368</Offset>
+                            <Offset>8</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337271652</ID>
+                          <Description>"Energy Weapons - Output Control Tuning"</Description>
+                          <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:Inactive
+1:1
+2:2
+3:3
+4:4
+5:5
+</DropDownList>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>GameDataMan</Address>
+                          <Offsets>
+                            <Offset>4</Offset>
+                            <Offset>1368</Offset>
+                            <Offset>8</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337271653</ID>
+                          <Description>"Explosive Weapons - Fuse Control Tuning"</Description>
+                          <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:Inactive
+1:1
+2:2
+3:3
+4:4
+5:5
+</DropDownList>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>GameDataMan</Address>
+                          <Offsets>
+                            <Offset>8</Offset>
+                            <Offset>1368</Offset>
+                            <Offset>8</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337271656</ID>
+                          <Description>"Melee Weapons - Drive Control Tuning"</Description>
+                          <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:Inactive
+1:1
+2:2
+3:3
+</DropDownList>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>GameDataMan</Address>
+                          <Offsets>
+                            <Offset>C</Offset>
+                            <Offset>1368</Offset>
+                            <Offset>8</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337271655</ID>
+                          <Description>"Direct Hit Modifier - Damage Tuning"</Description>
+                          <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:Inactive
+1:1
+2:2
+3:3
+</DropDownList>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>GameDataMan</Address>
+                          <Offsets>
+                            <Offset>10</Offset>
+                            <Offset>1368</Offset>
+                            <Offset>8</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337271654</ID>
+                          <Description>"Access Speed - Optimization"</Description>
+                          <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:Inactive
+1:1
+2:2
+</DropDownList>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>GameDataMan</Address>
+                          <Offsets>
+                            <Offset>28</Offset>
+                            <Offset>1368</Offset>
+                            <Offset>8</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271650</ID>
+                      <Description>"Damage Control"</Description>
+                      <GroupHeader>1</GroupHeader>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>1337271657</ID>
+                          <Description>"ACS - Dynamic Deflection Control Tuning"</Description>
+                          <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:Inactive
+1:1
+2:2
+3:3
+4:4
+5:5
+</DropDownList>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>GameDataMan</Address>
+                          <Offsets>
+                            <Offset>14</Offset>
+                            <Offset>1368</Offset>
+                            <Offset>8</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337271658</ID>
+                          <Description>"Repair Kits - Optimization"</Description>
+                          <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:Inactive
+1:1
+2:2
+3:3
+4:4
+</DropDownList>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>GameDataMan</Address>
+                          <Offsets>
+                            <Offset>24</Offset>
+                            <Offset>1368</Offset>
+                            <Offset>8</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                      </CheatEntries>
                     </CheatEntry>
                   </CheatEntries>
                 </CheatEntry>
@@ -11495,6 +11871,7 @@ unregistersymbol(BulletHelper)
                           <ID>1337198804</ID>
                           <Description>"ID"</Description>
                           <DropDownListLink>BULLET_ID</DropDownListLink>
+                          <ShowAsHex>1</ShowAsHex>
                           <VariableType>8 Bytes</VariableType>
                           <Address>BulletHelper</Address>
                         </CheatEntry>
@@ -12435,6 +12812,981 @@ unregistersymbol(BulletHelper)
                                 </CheatEntry>
                                 <CheatEntry>
                                   <ID>1337198925</ID>
+                                  <Description>"dummy8 pad4"</Description>
+                                  <ShowAsSigned>0</ShowAsSigned>
+                                  <Color>C0C0C0</Color>
+                                  <VariableType>8 Bytes</VariableType>
+                                  <Address>+108</Address>
+                                </CheatEntry>
+                              </CheatEntries>
+                            </CheatEntry>
+                          </CheatEntries>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271509</ID>
+                      <Description>"Bullet (npc)"</Description>
+                      <Options moHideChildren="1"/>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+alloc(Bullet_NpcHelper,16)
+registersymbol(Bullet_NpcHelper)
+
+Bullet_NpcHelper:
+dq #0
+
+[DISABLE]
+dealloc(Bullet_NpcHelper)
+unregistersymbol(Bullet_NpcHelper)
+</AssemblerScript>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>1337271510</ID>
+                          <Description>"ID"</Description>
+                          <DropDownListLink>BULLET_ID</DropDownListLink>
+                          <ShowAsHex>1</ShowAsHex>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>8 Bytes</VariableType>
+                          <Address>Bullet_NpcHelper</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337271511</ID>
+                          <Description>"Start"</Description>
+                          <ShowAsHex>1</ShowAsHex>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>Array of byte</VariableType>
+                          <ByteLength>0</ByteLength>
+                          <Address>Bullet_NpcHelper+8</Address>
+                          <Offsets>
+                            <Offset>4</Offset>
+                          </Offsets>
+                          <CheatEntries>
+                            <CheatEntry>
+                              <ID>1337271512</ID>
+                              <Description>"atkId_Bullet"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+0</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271513</ID>
+                              <Description>"sfxId_Bullet"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+4</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271514</ID>
+                              <Description>"sfxId_Hit"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+8</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271515</ID>
+                              <Description>"sfxId_Flick"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271516</ID>
+                              <Description>"life"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+10</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271517</ID>
+                              <Description>"dist"</Description>
+                              <ShowAsSigned>0</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+14</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271518</ID>
+                              <Description>"shootInterval"</Description>
+                              <VariableType>Float</VariableType>
+                              <Address>+18</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271519</ID>
+                              <Description>"gravityInRange"</Description>
+                              <VariableType>Float</VariableType>
+                              <Address>+1C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271520</ID>
+                              <Description>"gravityOutRange"</Description>
+                              <VariableType>Float</VariableType>
+                              <Address>+20</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271521</ID>
+                              <Description>"hormingStopRange"</Description>
+                              <VariableType>Float</VariableType>
+                              <Address>+24</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271522</ID>
+                              <Description>"initVellocity"</Description>
+                              <VariableType>Float</VariableType>
+                              <Address>+28</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271523</ID>
+                              <Description>"accelInRange"</Description>
+                              <VariableType>Float</VariableType>
+                              <Address>+2C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271524</ID>
+                              <Description>"accelOutRange"</Description>
+                              <VariableType>Float</VariableType>
+                              <Address>+30</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271525</ID>
+                              <Description>"maxVellocity"</Description>
+                              <VariableType>Float</VariableType>
+                              <Address>+34</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271526</ID>
+                              <Description>"minVellocity"</Description>
+                              <VariableType>Float</VariableType>
+                              <Address>+38</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271527</ID>
+                              <Description>"accelTime"</Description>
+                              <VariableType>Float</VariableType>
+                              <Address>+3C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271528</ID>
+                              <Description>"homingBeginDist"</Description>
+                              <VariableType>Float</VariableType>
+                              <Address>+40</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271529</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>2 Bytes</VariableType>
+                              <Address>+44</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271530</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>2 Bytes</VariableType>
+                              <Address>+46</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271531</ID>
+                              <Description>"hitRadius"</Description>
+                              <ShowAsSigned>0</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+3C+C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271532</ID>
+                              <Description>"hitRadiusMax"</Description>
+                              <ShowAsSigned>0</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+40+C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271533</ID>
+                              <Description>"spreadTime"</Description>
+                              <ShowAsSigned>0</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+44+C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271534</ID>
+                              <Description>"expDelay"</Description>
+                              <ShowAsSigned>0</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+48+C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271535</ID>
+                              <Description>"hormingOffsetRange"</Description>
+                              <ShowAsSigned>0</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+4C+C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271536</ID>
+                              <Description>"dmgHitRecordLifeTime"</Description>
+                              <ShowAsSigned>0</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+50+C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271537</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+54+C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271538</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+58+C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271539</ID>
+                              <Description>"externalForce"</Description>
+                              <ShowAsSigned>0</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+5C+C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271540</ID>
+                              <Description>"spEffectIDForShooter"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+60+C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271541</ID>
+                              <Description>"autoSearchNPCThinkID"</Description>
+                              <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+10000:Player
+138200:Enemy
+</DropDownList>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+64+C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271542</ID>
+                              <Description>"HitBulletID"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+68+C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271543</ID>
+                              <Description>"spEffectId0"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+6C+C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271544</ID>
+                              <Description>"spEffectId1"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+70+C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271545</ID>
+                              <Description>"spEffectId2"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+74+C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271546</ID>
+                              <Description>"spEffectId3"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+78+C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271547</ID>
+                              <Description>"spEffectId4"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+7C+C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271548</ID>
+                              <Description>"numShoot"</Description>
+                              <ShowAsSigned>0</ShowAsSigned>
+                              <VariableType>2 Bytes</VariableType>
+                              <Address>+80+C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271549</ID>
+                              <Description>"Group 61"</Description>
+                              <ShowAsSigned>0</ShowAsSigned>
+                              <GroupHeader>1</GroupHeader>
+                              <Address>+C</Address>
+                              <CheatEntries>
+                                <CheatEntry>
+                                  <ID>1337271550</ID>
+                                  <Description>"homingAngle"</Description>
+                                  <ShowAsSigned>0</ShowAsSigned>
+                                  <VariableType>2 Bytes</VariableType>
+                                  <Address>+82</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271551</ID>
+                                  <Description>"shootAngle"</Description>
+                                  <ShowAsSigned>1</ShowAsSigned>
+                                  <VariableType>2 Bytes</VariableType>
+                                  <Address>+84</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271552</ID>
+                                  <Description>"shootAngleInterval"</Description>
+                                  <ShowAsSigned>0</ShowAsSigned>
+                                  <VariableType>2 Bytes</VariableType>
+                                  <Address>+86</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271553</ID>
+                                  <Description>"shootAngleXInterval"</Description>
+                                  <ShowAsSigned>0</ShowAsSigned>
+                                  <VariableType>2 Bytes</VariableType>
+                                  <Address>+88</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271554</ID>
+                                  <Description>"damageDamp"</Description>
+                                  <ShowAsSigned>0</ShowAsSigned>
+                                  <VariableType>Byte</VariableType>
+                                  <Address>+8A</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271555</ID>
+                                  <Description>"spelDamageDamp"</Description>
+                                  <ShowAsSigned>0</ShowAsSigned>
+                                  <VariableType>Byte</VariableType>
+                                  <Address>+8b</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271556</ID>
+                                  <Description>"fireDamageDamp"</Description>
+                                  <VariableType>Byte</VariableType>
+                                  <Address>+8c</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271557</ID>
+                                  <Description>"thunderDamageDamp"</Description>
+                                  <VariableType>Byte</VariableType>
+                                  <Address>+8d</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271558</ID>
+                                  <Description>"staminaDamp"</Description>
+                                  <VariableType>Byte</VariableType>
+                                  <Address>+8e</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271559</ID>
+                                  <Description>"knockbackDamp"</Description>
+                                  <VariableType>Byte</VariableType>
+                                  <Address>+8f</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271560</ID>
+                                  <Description>"shootAngleXZ"</Description>
+                                  <ShowAsSigned>0</ShowAsSigned>
+                                  <VariableType>Byte</VariableType>
+                                  <Address>+90</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271561</ID>
+                                  <Description>"lockShootLimitAng"</Description>
+                                  <ShowAsSigned>1</ShowAsSigned>
+                                  <VariableType>Byte</VariableType>
+                                  <Address>+91</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271562</ID>
+                                  <Description>"dummy8 pad2[1]"</Description>
+                                  <ShowAsSigned>0</ShowAsSigned>
+                                  <Color>C0C0C0</Color>
+                                  <VariableType>Byte</VariableType>
+                                  <Address>+92</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271563</ID>
+                                  <Description>"prevVelocityDirRate"</Description>
+                                  <ShowAsSigned>0</ShowAsSigned>
+                                  <VariableType>Byte</VariableType>
+                                  <Address>+93</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271564</ID>
+                                  <Description>"atkAttribute"</Description>
+                                  <ShowAsSigned>1</ShowAsSigned>
+                                  <VariableType>Byte</VariableType>
+                                  <Address>+94</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271565</ID>
+                                  <Description>"spAttribute"</Description>
+                                  <ShowAsSigned>1</ShowAsSigned>
+                                  <VariableType>Byte</VariableType>
+                                  <Address>+95</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271566</ID>
+                                  <Description>"Material_AttackType"</Description>
+                                  <ShowAsSigned>1</ShowAsSigned>
+                                  <VariableType>Byte</VariableType>
+                                  <Address>+96</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271567</ID>
+                                  <Description>"Material_AttackMaterial"</Description>
+                                  <ShowAsSigned>1</ShowAsSigned>
+                                  <VariableType>Byte</VariableType>
+                                  <Address>+97</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271568</ID>
+                                  <Description>"isPenetrateChr"</Description>
+                                  <ShowAsSigned>0</ShowAsSigned>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>0</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+98</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271569</ID>
+                                  <Description>"isPenetrateObj"</Description>
+                                  <ShowAsSigned>0</ShowAsSigned>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>1</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+98</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271570</ID>
+                                  <Description>"dummy8 pad"</Description>
+                                  <ShowAsSigned>0</ShowAsSigned>
+                                  <Color>C0C0C0</Color>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>2</BitStart>
+                                  <BitLength>6</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+98</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271571</ID>
+                                  <Description>"launchConditionType"</Description>
+                                  <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:0 : on hit
+3:3 : Enemy?
+254:254
+-1:-1 : on life end
+</DropDownList>
+                                  <ShowAsSigned>1</ShowAsSigned>
+                                  <VariableType>Byte</VariableType>
+                                  <Address>+99</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271572</ID>
+                                  <Description>"FollowType"</Description>
+                                  <ShowAsSigned>0</ShowAsSigned>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>0</BitStart>
+                                  <BitLength>3</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+9a</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271573</ID>
+                                  <Description>"EmittePosType"</Description>
+                                  <ShowAsSigned>0</ShowAsSigned>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>3</BitStart>
+                                  <BitLength>3</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+9a</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271574</ID>
+                                  <Description>"isAttackSFX"</Description>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>6</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+9a</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271575</ID>
+                                  <Description>"isEndlessHit"</Description>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>7</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+9a</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271576</ID>
+                                  <Description>"isPenetrateMap"</Description>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>0</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+9b</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271577</ID>
+                                  <Description>"isHitBothTeam"</Description>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>1</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+9b</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271578</ID>
+                                  <Description>"isUseSharedHitList"</Description>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>2</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+9b</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271579</ID>
+                                  <Description>"isUseMultiDmyPolyIfPlace"</Description>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>3</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+9b</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271580</ID>
+                                  <Description>"isHitOtherBulletForceEraseA"</Description>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>4</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+9b</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271581</ID>
+                                  <Description>"isHitOtherBulletForceEraseB"</Description>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>5</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+9b</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271582</ID>
+                                  <Description>"isHitForceMagic"</Description>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>6</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+9b</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271583</ID>
+                                  <Description>"isIgnoreSfxIfHitWater"</Description>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>7</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+9b</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271584</ID>
+                                  <Description>"isIgnoreMoveStateIfHitWater"</Description>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>0</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+9c</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271585</ID>
+                                  <Description>"isHitDarkForceMagic"</Description>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>1</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+9c</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271586</ID>
+                                  <Description>"dmgCalcSide"</Description>
+                                  <ShowAsSigned>0</ShowAsSigned>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>2</BitStart>
+                                  <BitLength>2</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+9c</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271587</ID>
+                                  <Description>"isEnableAutoHoming"</Description>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>4</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+9c</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271588</ID>
+                                  <Description>"isSyncBulletCulcDumypolyPos"</Description>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>5</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+9c</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271589</ID>
+                                  <Description>"isOwnerOverrideInitAngle"</Description>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>6</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+9c</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271590</ID>
+                                  <Description>"isInheritSfxToChild"</Description>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>7</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+9c</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271591</ID>
+                                  <Description>"darkDamageDamp"</Description>
+                                  <VariableType>Byte</VariableType>
+                                  <Address>+9D</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271592</ID>
+                                  <Description>"bulletSfxDeleteType_byHit"</Description>
+                                  <VariableType>Byte</VariableType>
+                                  <Address>+9E</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271593</ID>
+                                  <Description>"bulletSfxDeleteType_byLifeDead"</Description>
+                                  <VariableType>Byte</VariableType>
+                                  <Address>+9F</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271594</ID>
+                                  <Description>"targetYOffsetRange"</Description>
+                                  <ShowAsSigned>0</ShowAsSigned>
+                                  <VariableType>4 Bytes</VariableType>
+                                  <Address>+A0</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271595</ID>
+                                  <Description>"shootAngleYMaxRandom"</Description>
+                                  <ShowAsSigned>0</ShowAsSigned>
+                                  <VariableType>4 Bytes</VariableType>
+                                  <Address>+A4</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271596</ID>
+                                  <Description>"shootAngleXMaxRandom"</Description>
+                                  <ShowAsSigned>0</ShowAsSigned>
+                                  <VariableType>4 Bytes</VariableType>
+                                  <Address>+A8</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271597</ID>
+                                  <Description>"intervalCreateBulletId"</Description>
+                                  <ShowAsSigned>1</ShowAsSigned>
+                                  <VariableType>4 Bytes</VariableType>
+                                  <Address>+AC</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271598</ID>
+                                  <Description>"intervalCreateTimeMin"</Description>
+                                  <VariableType>Float</VariableType>
+                                  <Address>+B0</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271599</ID>
+                                  <Description>"intervalCreateTimeMax"</Description>
+                                  <VariableType>Float</VariableType>
+                                  <Address>+b4</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271600</ID>
+                                  <Description>"predictionShootObserveTime"</Description>
+                                  <ShowAsSigned>1</ShowAsSigned>
+                                  <VariableType>Float</VariableType>
+                                  <Address>+B8</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271601</ID>
+                                  <Description>"intervalCreateWaitTime"</Description>
+                                  <VariableType>Float</VariableType>
+                                  <Address>+BC</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271602</ID>
+                                  <Description>"sfxPostureType"</Description>
+                                  <VariableType>Byte</VariableType>
+                                  <Address>+C0</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271603</ID>
+                                  <Description>"createLimitGroupId"</Description>
+                                  <VariableType>Byte</VariableType>
+                                  <Address>+C1</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271604</ID>
+                                  <Description>"dummy8 pad5"</Description>
+                                  <Color>C0C0C0</Color>
+                                  <VariableType>Byte</VariableType>
+                                  <Address>+C2</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271605</ID>
+                                  <Description>"isInheritSpeedToChild"</Description>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>0</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+C3</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271606</ID>
+                                  <Description>"isDisableHitSfx_byChrAndObj"</Description>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>1</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+C3</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271607</ID>
+                                  <Description>"isCheckWall_byCenterRay"</Description>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>2</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+C3</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271608</ID>
+                                  <Description>"isHitFlare"</Description>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>3</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+C3</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271609</ID>
+                                  <Description>"isUseBulletWallFilter"</Description>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>4</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+C3</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271610</ID>
+                                  <Description>"dummy8 pad1"</Description>
+                                  <Color>C0C0C0</Color>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>5</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+C3</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271611</ID>
+                                  <Description>"isNonDependenceMagicForFunnleNum"</Description>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>6</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+C3</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271612</ID>
+                                  <Description>"isAiInterruptShootNoDamageBullet"</Description>
+                                  <VariableType>Binary</VariableType>
+                                  <BitStart>7</BitStart>
+                                  <BitLength>1</BitLength>
+                                  <ShowAsBinary>0</ShowAsBinary>
+                                  <Address>+C3</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271613</ID>
+                                  <Description>"randomCreateRadius"</Description>
+                                  <VariableType>Float</VariableType>
+                                  <Address>+C4</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271614</ID>
+                                  <Description>"followOffset_BaseHeight"</Description>
+                                  <ShowAsSigned>1</ShowAsSigned>
+                                  <VariableType>4 Bytes</VariableType>
+                                  <Address>+C8</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271615</ID>
+                                  <Description>"assetNo_Hit"</Description>
+                                  <ShowAsSigned>1</ShowAsSigned>
+                                  <VariableType>4 Bytes</VariableType>
+                                  <Address>+CC</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271616</ID>
+                                  <Description>"lifeRandomRange"</Description>
+                                  <ShowAsSigned>1</ShowAsSigned>
+                                  <VariableType>Float</VariableType>
+                                  <Address>+D0</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271617</ID>
+                                  <Description>"homingAngleX"</Description>
+                                  <ShowAsSigned>1</ShowAsSigned>
+                                  <VariableType>2 Bytes</VariableType>
+                                  <Address>+D4</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271618</ID>
+                                  <Description>"ballisticCalcType"</Description>
+                                  <ShowAsSigned>1</ShowAsSigned>
+                                  <VariableType>Byte</VariableType>
+                                  <Address>+D6</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271619</ID>
+                                  <Description>"attachEffectType"</Description>
+                                  <ShowAsSigned>1</ShowAsSigned>
+                                  <VariableType>Byte</VariableType>
+                                  <Address>+D7</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271620</ID>
+                                  <Description>"seId_Bullet1"</Description>
+                                  <ShowAsSigned>1</ShowAsSigned>
+                                  <VariableType>4 Bytes</VariableType>
+                                  <Address>+D8</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271621</ID>
+                                  <Description>""</Description>
+                                  <ShowAsSigned>1</ShowAsSigned>
+                                  <VariableType>2 Bytes</VariableType>
+                                  <Address>+DC</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271622</ID>
+                                  <Description>""</Description>
+                                  <ShowAsSigned>1</ShowAsSigned>
+                                  <VariableType>2 Bytes</VariableType>
+                                  <Address>+DE</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271623</ID>
+                                  <Description>"seId_Hit"</Description>
+                                  <ShowAsSigned>1</ShowAsSigned>
+                                  <VariableType>4 Bytes</VariableType>
+                                  <Address>+E0</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271624</ID>
+                                  <Description>"seId_Flick"</Description>
+                                  <ShowAsSigned>1</ShowAsSigned>
+                                  <VariableType>Float</VariableType>
+                                  <Address>+E4</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271625</ID>
+                                  <Description>"howitzerShootAngleXMin"</Description>
+                                  <ShowAsSigned>0</ShowAsSigned>
+                                  <VariableType>2 Bytes</VariableType>
+                                  <Address>+e8</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271626</ID>
+                                  <Description>"howitzerShootAngleXMax"</Description>
+                                  <ShowAsSigned>0</ShowAsSigned>
+                                  <VariableType>2 Bytes</VariableType>
+                                  <Address>+EA</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271627</ID>
+                                  <Description>"howitzerInitMinVelocity"</Description>
+                                  <ShowAsSigned>0</ShowAsSigned>
+                                  <VariableType>4 Bytes</VariableType>
+                                  <Address>+EC</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271628</ID>
+                                  <Description>"howitzerInitMaxVelocity"</Description>
+                                  <ShowAsSigned>0</ShowAsSigned>
+                                  <VariableType>Float</VariableType>
+                                  <Address>+F0</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271629</ID>
+                                  <Description>"sfxId_ForceErase"</Description>
+                                  <ShowAsSigned>1</ShowAsSigned>
+                                  <VariableType>Float</VariableType>
+                                  <Address>+F4</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271630</ID>
+                                  <Description>"bulletSfxDeleteType_byForceErase"</Description>
+                                  <ShowAsSigned>1</ShowAsSigned>
+                                  <VariableType>Byte</VariableType>
+                                  <Address>+F8</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271631</ID>
+                                  <Description>"dummy8 pad3"</Description>
+                                  <ShowAsSigned>1</ShowAsSigned>
+                                  <Color>C0C0C0</Color>
+                                  <VariableType>Byte</VariableType>
+                                  <Address>+F9</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271632</ID>
+                                  <Description>"followDmypoly_forSfxPose"</Description>
+                                  <ShowAsSigned>1</ShowAsSigned>
+                                  <VariableType>2 Bytes</VariableType>
+                                  <Address>+FA</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271633</ID>
+                                  <Description>"followOffset_Radius"</Description>
+                                  <ShowAsSigned>0</ShowAsSigned>
+                                  <VariableType>4 Bytes</VariableType>
+                                  <Address>+FC</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271634</ID>
+                                  <Description>"spBulletDistUpRate"</Description>
+                                  <ShowAsSigned>0</ShowAsSigned>
+                                  <VariableType>Float</VariableType>
+                                  <Address>+100</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271635</ID>
+                                  <Description>"nolockTargetDist"</Description>
+                                  <ShowAsSigned>0</ShowAsSigned>
+                                  <VariableType>4 Bytes</VariableType>
+                                  <Address>+104</Address>
+                                </CheatEntry>
+                                <CheatEntry>
+                                  <ID>1337271636</ID>
                                   <Description>"dummy8 pad4"</Description>
                                   <ShowAsSigned>0</ShowAsSigned>
                                   <Color>C0C0C0</Color>
@@ -34499,6 +35851,32 @@ int on_disable() {
               <ID>1337271409</ID>
               <Description>"Dropdowns"</Description>
               <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>1337271660</ID>
+                  <Description>"ON_OFF"</Description>
+                  <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+                  <GroupHeader>1</GroupHeader>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>1337271661</ID>
+                  <Description>"ENABLED_DISABLED"</Description>
+                  <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:Disabled
+1:Enabled
+</DropDownList>
+                  <GroupHeader>1</GroupHeader>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>1337271662</ID>
+                  <Description>"ACTIVE_INACTIVE"</Description>
+                  <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:Inactive
+1:Active
+</DropDownList>
+                  <GroupHeader>1</GroupHeader>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
             <CheatEntry>
               <ID>1337271407</ID>
