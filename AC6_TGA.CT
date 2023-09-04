@@ -2552,168 +2552,6 @@ Credits are listed on the Github!
                   </CheatEntries>
                 </CheatEntry>
                 <CheatEntry>
-                  <ID>1337213396</ID>
-                  <Description>"EquipInventoryData"</Description>
-                  <Options moHideChildren="1"/>
-                  <VariableType>Auto Assembler Script</VariableType>
-                  <AssemblerScript>[ENABLE]
-alloc(EquipInventoryDataIdx,4)
-registerSymbol(EquipInventoryDataIdx)
-
-EquipInventoryDataIdx:
-dd 00000000
-
-[DISABLE]
-dealloc(EquipInventoryDataIdx)
-unregisterSymbol(EquipInventoryDataIdx)
-</AssemblerScript>
-                  <CheatEntries>
-                    <CheatEntry>
-                      <ID>1337213397</ID>
-                      <Description>"Start"</Description>
-                      <VariableType>Auto Assembler Script</VariableType>
-                      <AssemblerScript>[ENABLE]
-{$lua}
-if not syntaxcheck then disableMemrec(memrec) end
-writeInteger("EquipInventoryDataIdx",0)
-[DISABLE]
-</AssemblerScript>
-                    </CheatEntry>
-                    <CheatEntry>
-                      <ID>1337213401</ID>
-                      <Description>"&gt;"</Description>
-                      <VariableType>Auto Assembler Script</VariableType>
-                      <AssemblerScript>[ENABLE]
-{$lua}
-if not syntaxcheck then disableMemrec(memrec) end
-local Idx = readInteger("EquipInventoryDataIdx")+1
-writeInteger("EquipInventoryDataIdx",Idx)
-[DISABLE]
-</AssemblerScript>
-                    </CheatEntry>
-                    <CheatEntry>
-                      <ID>1337213398</ID>
-                      <Description>"&lt;"</Description>
-                      <VariableType>Auto Assembler Script</VariableType>
-                      <AssemblerScript>[ENABLE]
-{$lua}
-if not syntaxcheck then disableMemrec(memrec) end
-local Idx = readInteger("EquipInventoryDataIdx")-1
-if Idx &gt;= 0 then
-   writeInteger("EquipInventoryDataIdx",Idx)
-end
-[DISABLE]
-</AssemblerScript>
-                    </CheatEntry>
-                    <CheatEntry>
-                      <ID>1337213376</ID>
-                      <Description>"===== Inventory list ====="</Description>
-                      <ShowAsHex>1</ShowAsHex>
-                      <ShowAsSigned>1</ShowAsSigned>
-                      <VariableType>Array of byte</VariableType>
-                      <ByteLength>0</ByteLength>
-                      <Address>GameDataMan</Address>
-                      <Offsets>
-                        <Offset>readInteger("EquipInventoryDataIdx")*0x10</Offset>
-                        <Offset>610</Offset>
-                        <Offset>8</Offset>
-                      </Offsets>
-                      <CheatEntries>
-                        <CheatEntry>
-                          <ID>1337213399</ID>
-                          <Description>"Idx"</Description>
-                          <ShowAsSigned>0</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>EquipInventoryDataIdx</Address>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337213379</ID>
-                          <Description>"GaItemHandle"</Description>
-                          <ShowAsHex>1</ShowAsHex>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>+00</Address>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337213382</ID>
-                          <Description>"Item"</Description>
-                          <DropDownListLink>ItemDropdown</DropDownListLink>
-                          <ShowAsHex>1</ShowAsHex>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>+04</Address>
-                          <CheatEntries>
-                            <CheatEntry>
-                              <ID>1337213386</ID>
-                              <Description>"ItemId"</Description>
-                              <ShowAsHex>1</ShowAsHex>
-                              <ShowAsSigned>0</ShowAsSigned>
-                              <VariableType>4 Bytes</VariableType>
-                              <Address>+00</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337213400</ID>
-                              <Description>"EquipId"</Description>
-                              <ShowAsSigned>0</ShowAsSigned>
-                              <VariableType>Binary</VariableType>
-                              <BitStart>0</BitStart>
-                              <BitLength>28</BitLength>
-                              <ShowAsBinary>0</ShowAsBinary>
-                              <Address>+00</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337213387</ID>
-                              <Description>"Type"</Description>
-                              <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:Weapon
-1:Protector
-2:Accessory
-4:Goods
-5:Fcs
-6:Booster
-7:Generator
-8:Expansion
-15:None
-</DropDownList>
-                              <ShowAsSigned>0</ShowAsSigned>
-                              <VariableType>Binary</VariableType>
-                              <BitStart>4</BitStart>
-                              <BitLength>4</BitLength>
-                              <ShowAsBinary>0</ShowAsBinary>
-                              <Address>+03</Address>
-                            </CheatEntry>
-                          </CheatEntries>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337213381</ID>
-                          <Description>"Quantity"</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>+08</Address>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337213380</ID>
-                          <Description>"DispIdx"</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>+0C</Address>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337213383</ID>
-                          <Description>""</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>+10</Address>
-                        </CheatEntry>
-                      </CheatEntries>
-                    </CheatEntry>
-                    <CheatEntry>
-                      <ID>1337213390</ID>
-                      <Description>"======================================"</Description>
-                      <GroupHeader>1</GroupHeader>
-                    </CheatEntry>
-                  </CheatEntries>
-                </CheatEntry>
-                <CheatEntry>
                   <ID>1337271638</ID>
                   <Description>"OS Tuning"</Description>
                   <Options moHideChildren="1"/>
@@ -3086,6 +2924,248 @@ dd 0  // Quick Turns
                           </Offsets>
                         </CheatEntry>
                       </CheatEntries>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>1337213396</ID>
+                  <Description>"EquipInventoryData"</Description>
+                  <Options moHideChildren="1"/>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[ENABLE]
+alloc(EquipInventoryDataIdx,4)
+registerSymbol(EquipInventoryDataIdx)
+
+EquipInventoryDataIdx:
+dd 00000000
+
+[DISABLE]
+dealloc(EquipInventoryDataIdx)
+unregisterSymbol(EquipInventoryDataIdx)
+</AssemblerScript>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>1337213397</ID>
+                      <Description>"Start"</Description>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+{$lua}
+if not syntaxcheck then disableMemrec(memrec) end
+writeInteger("EquipInventoryDataIdx",0)
+[DISABLE]
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337213401</ID>
+                      <Description>"&gt;"</Description>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+{$lua}
+if not syntaxcheck then disableMemrec(memrec) end
+local Idx = readInteger("EquipInventoryDataIdx")+1
+writeInteger("EquipInventoryDataIdx",Idx)
+[DISABLE]
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337213398</ID>
+                      <Description>"&lt;"</Description>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+{$lua}
+if not syntaxcheck then disableMemrec(memrec) end
+local Idx = readInteger("EquipInventoryDataIdx")-1
+if Idx &gt;= 0 then
+   writeInteger("EquipInventoryDataIdx",Idx)
+end
+[DISABLE]
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337213376</ID>
+                      <Description>"===== Inventory list ====="</Description>
+                      <ShowAsHex>1</ShowAsHex>
+                      <ShowAsSigned>1</ShowAsSigned>
+                      <VariableType>Array of byte</VariableType>
+                      <ByteLength>0</ByteLength>
+                      <Address>GameDataMan</Address>
+                      <Offsets>
+                        <Offset>readInteger("EquipInventoryDataIdx")*0x10</Offset>
+                        <Offset>610</Offset>
+                        <Offset>8</Offset>
+                      </Offsets>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>1337213399</ID>
+                          <Description>"Idx"</Description>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>EquipInventoryDataIdx</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337213379</ID>
+                          <Description>"GaItemHandle"</Description>
+                          <ShowAsHex>1</ShowAsHex>
+                          <ShowAsSigned>1</ShowAsSigned>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>+00</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337213382</ID>
+                          <Description>"Item"</Description>
+                          <DropDownListLink>ItemDropdown</DropDownListLink>
+                          <ShowAsHex>1</ShowAsHex>
+                          <ShowAsSigned>1</ShowAsSigned>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>+04</Address>
+                          <CheatEntries>
+                            <CheatEntry>
+                              <ID>1337213386</ID>
+                              <Description>"ItemId"</Description>
+                              <ShowAsHex>1</ShowAsHex>
+                              <ShowAsSigned>0</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+00</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337213400</ID>
+                              <Description>"EquipId"</Description>
+                              <ShowAsSigned>0</ShowAsSigned>
+                              <VariableType>Binary</VariableType>
+                              <BitStart>0</BitStart>
+                              <BitLength>28</BitLength>
+                              <ShowAsBinary>0</ShowAsBinary>
+                              <Address>+00</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337213387</ID>
+                              <Description>"Type"</Description>
+                              <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:Weapon
+1:Protector
+2:Accessory
+4:Goods
+5:Fcs
+6:Booster
+7:Generator
+8:Expansion
+15:None
+</DropDownList>
+                              <ShowAsSigned>0</ShowAsSigned>
+                              <VariableType>Binary</VariableType>
+                              <BitStart>4</BitStart>
+                              <BitLength>4</BitLength>
+                              <ShowAsBinary>0</ShowAsBinary>
+                              <Address>+03</Address>
+                            </CheatEntry>
+                          </CheatEntries>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337213381</ID>
+                          <Description>"Quantity"</Description>
+                          <ShowAsSigned>1</ShowAsSigned>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>+08</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337213380</ID>
+                          <Description>"DispIdx"</Description>
+                          <ShowAsSigned>1</ShowAsSigned>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>+0C</Address>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337213390</ID>
+                      <Description>"======================================"</Description>
+                      <GroupHeader>1</GroupHeader>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271665</ID>
+                      <Description>"inventoryNum"</Description>
+                      <ShowAsSigned>1</ShowAsSigned>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>GameDataMan</Address>
+                      <Offsets>
+                        <Offset>600+18</Offset>
+                        <Offset>8</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271666</ID>
+                      <Description>"tailDataIdx"</Description>
+                      <ShowAsSigned>1</ShowAsSigned>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>GameDataMan</Address>
+                      <Offsets>
+                        <Offset>600+1C</Offset>
+                        <Offset>8</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271667</ID>
+                      <Description>"Print Inventory"</Description>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>{$lua}
+if syntaxcheck then return end
+[ENABLE]
+local function get_type(id)
+    local types = {
+        weapon = {0, "Weapon"},
+        protector = {0x10000000, "Protector"},
+        accessory = {0x20000000, "Accessory"},
+        unused = {0x30000000, "N/A"},
+        goods = {0x40000000, "Goods"},
+        fcs = {0x50000000, "Fcs"},
+        booster = {0x60000000, "Booster"},
+        generator = {0x70000000, "Generator"},
+        expansion = {0x80000000, "Expansion"}
+    }
+
+    if id &gt;= types.expansion[1] then
+        return types.expansion
+    elseif id &gt;= types.generator[1] then
+        return types.generator
+    elseif id &gt;= types.booster[1] then
+        return types.booster
+    elseif id &gt;= types.fcs[1] then
+        return types.fcs
+    elseif id &gt;= types.goods[1] then
+        return types.goods
+    elseif id &gt;= types.unused[1] then
+        return false
+    elseif id &gt;= types.accessory[1] then
+        return types.accessory
+    elseif id &gt;= types.protector[1] then
+        return types.protector
+    else
+        return types.weapon
+    end
+end
+
+local GameDataMan = readPointer("GameDataMan")
+local PlayerGameData = readPointer(GameDataMan + 0x8)
+local EquipInventoryData = getAddress(PlayerGameData + 0x600)
+
+local inventoryList = readPointer(EquipInventoryData + 0x10)
+local inventoryNum = readInteger(EquipInventoryData + 0x18)
+
+for i=0,inventoryNum do
+    local item = getAddress(inventoryList + i * 0x10)
+    local itemId = readInteger(item + 4)
+    local itemType = get_type(itemId)
+    itemId = itemId - itemType[1]
+    local quantity = readInteger(item + 8)
+    if itemId ~= 0xFFFFFFFF and itemId ~= nil and quantity ~= nil then
+        print(string.format("#%d | Type: %s | ID: %d | Quantity: %d",i, itemType[2], itemId, quantity))
+    end
+end
+
+disableMemrec(memrec)
+
+[DISABLE]
+
+</AssemblerScript>
                     </CheatEntry>
                   </CheatEntries>
                 </CheatEntry>
@@ -35850,6 +35930,7 @@ int on_disable() {
             <CheatEntry>
               <ID>1337271409</ID>
               <Description>"Dropdowns"</Description>
+              <Options moHideChildren="1"/>
               <GroupHeader>1</GroupHeader>
               <CheatEntries>
                 <CheatEntry>
