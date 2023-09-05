@@ -1748,512 +1748,354 @@ Credits are listed on the Github!
                   <GroupHeader>1</GroupHeader>
                   <CheatEntries>
                     <CheatEntry>
-                      <ID>1337193063</ID>
-                      <Description>"ChrAsm2"</Description>
-                      <Options moHideChildren="1"/>
-                      <GroupHeader>1</GroupHeader>
-                      <CheatEntries>
-                        <CheatEntry>
-                          <ID>1337193096</ID>
-                          <Description>"PrimaryLeftWep"</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>24C</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337193097</ID>
-                          <Description>"PrimaryRightWep"</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>250</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337193098</ID>
-                          <Description>"SecondaryLeftWep"</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>254</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337193099</ID>
-                          <Description>"SecondaryRightWep"</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>258</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337193100</ID>
-                          <Description>"TertiaryLeftWep"</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>25C</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337193101</ID>
-                          <Description>"TertiaryRightWep"</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>260</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337193102</ID>
-                          <Description>"PrimaryArrow"</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>264</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337193103</ID>
-                          <Description>"PrimaryBolt"</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>268</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337193104</ID>
-                          <Description>"SecondaryArrow"</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>26C</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337193105</ID>
-                          <Description>"SecondaryBolt"</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>270</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337193106</ID>
-                          <Description>"TertiaryArrow"</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>274</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337193107</ID>
-                          <Description>"TertiaryBolt"</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>278</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337193108</ID>
-                          <Description>""</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>27C</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337193109</ID>
-                          <Description>""</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>280</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337193110</ID>
-                          <Description>""</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>284</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337193111</ID>
-                          <Description>""</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>288</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337193112</ID>
-                          <Description>""</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>28C</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337193113</ID>
-                          <Description>""</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>290</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337193114</ID>
-                          <Description>"Helmet"</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>294</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337193115</ID>
-                          <Description>"Armor"</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>298</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337193116</ID>
-                          <Description>"Gauntlet"</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>29C</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337193117</ID>
-                          <Description>"Leggings"</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>2A0</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337271299</ID>
-                          <Description>"Hair"</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <Color>C0C0C0</Color>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>2A4</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337271303</ID>
-                          <Description>"Accessory 1"</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>2A8</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337271302</ID>
-                          <Description>"Accessory 2"</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>2AC</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337271301</ID>
-                          <Description>"Accessory 3"</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>2B0</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337271300</ID>
-                          <Description>"Accessory 4"</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>2B4</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337271304</ID>
-                          <Description>"Accessory 5"</Description>
-                          <ShowAsSigned>1</ShowAsSigned>
-                          <Color>C0C0C0</Color>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>GameDataMan</Address>
-                          <Offsets>
-                            <Offset>2B8</Offset>
-                            <Offset>08</Offset>
-                          </Offsets>
-                        </CheatEntry>
-                      </CheatEntries>
-                    </CheatEntry>
-                    <CheatEntry>
                       <ID>1337271306</ID>
                       <Description>"L-Arm Unit"</Description>
-                      <ShowAsHex>1</ShowAsHex>
+                      <DropDownListLink>WEAPON_ID</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
                       <VariableType>4 Bytes</VariableType>
                       <Address>GameDataMan</Address>
                       <Offsets>
-                        <Offset>424</Offset>
+                        <Offset>4F4</Offset>
                         <Offset>08</Offset>
                       </Offsets>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>1337271307</ID>
                       <Description>"R-Arm Unit"</Description>
-                      <ShowAsHex>1</ShowAsHex>
+                      <DropDownListLink>WEAPON_ID</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
                       <VariableType>4 Bytes</VariableType>
                       <Address>GameDataMan</Address>
                       <Offsets>
-                        <Offset>428</Offset>
+                        <Offset>4F8</Offset>
                         <Offset>08</Offset>
                       </Offsets>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>1337271308</ID>
                       <Description>"L-Back Unit"</Description>
-                      <ShowAsHex>1</ShowAsHex>
+                      <DropDownListLink>WEAPON_ID</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
                       <VariableType>4 Bytes</VariableType>
                       <Address>GameDataMan</Address>
                       <Offsets>
-                        <Offset>42C</Offset>
+                        <Offset>4FC</Offset>
                         <Offset>08</Offset>
                       </Offsets>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>1337271309</ID>
                       <Description>"R-Back Unit"</Description>
-                      <ShowAsHex>1</ShowAsHex>
+                      <DropDownListLink>WEAPON_ID</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
                       <VariableType>4 Bytes</VariableType>
                       <Address>GameDataMan</Address>
                       <Offsets>
-                        <Offset>430</Offset>
+                        <Offset>500</Offset>
                         <Offset>08</Offset>
                       </Offsets>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>1337271312</ID>
-                      <Description>""</Description>
-                      <ShowAsHex>1</ShowAsHex>
+                      <Description>"TertiaryLeftWep"</Description>
+                      <DropDownListLink>WEAPON_ID</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
+                      <Color>C0C0C0</Color>
                       <VariableType>4 Bytes</VariableType>
                       <Address>GameDataMan</Address>
                       <Offsets>
-                        <Offset>43C</Offset>
+                        <Offset>504</Offset>
                         <Offset>08</Offset>
                       </Offsets>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>1337271313</ID>
-                      <Description>""</Description>
-                      <ShowAsHex>1</ShowAsHex>
+                      <Description>"TertiaryRightWep"</Description>
+                      <DropDownListLink>WEAPON_ID</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
+                      <Color>C0C0C0</Color>
                       <VariableType>4 Bytes</VariableType>
                       <Address>GameDataMan</Address>
                       <Offsets>
-                        <Offset>440</Offset>
+                        <Offset>508</Offset>
                         <Offset>08</Offset>
                       </Offsets>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>1337271314</ID>
-                      <Description>""</Description>
-                      <ShowAsHex>1</ShowAsHex>
+                      <Description>"PrimaryArrow"</Description>
+                      <DropDownListLink>WEAPON_ID</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
+                      <Color>C0C0C0</Color>
                       <VariableType>4 Bytes</VariableType>
                       <Address>GameDataMan</Address>
                       <Offsets>
-                        <Offset>444</Offset>
+                        <Offset>50C</Offset>
                         <Offset>08</Offset>
                       </Offsets>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>1337271315</ID>
-                      <Description>""</Description>
-                      <ShowAsHex>1</ShowAsHex>
+                      <Description>"PrimaryBolt"</Description>
+                      <DropDownListLink>WEAPON_ID</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
+                      <Color>C0C0C0</Color>
                       <VariableType>4 Bytes</VariableType>
                       <Address>GameDataMan</Address>
                       <Offsets>
-                        <Offset>448</Offset>
+                        <Offset>510</Offset>
                         <Offset>08</Offset>
                       </Offsets>
                     </CheatEntry>
                     <CheatEntry>
-                      <ID>1337271324</ID>
-                      <Description>"Head"</Description>
-                      <ShowAsHex>1</ShowAsHex>
+                      <ID>1337271672</ID>
+                      <Description>"SecondaryArrow"</Description>
+                      <DropDownListLink>WEAPON_ID</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
+                      <Color>C0C0C0</Color>
                       <VariableType>4 Bytes</VariableType>
                       <Address>GameDataMan</Address>
                       <Offsets>
-                        <Offset>46C</Offset>
+                        <Offset>514</Offset>
                         <Offset>08</Offset>
                       </Offsets>
                     </CheatEntry>
                     <CheatEntry>
-                      <ID>1337271325</ID>
-                      <Description>"Core"</Description>
-                      <ShowAsHex>1</ShowAsHex>
+                      <ID>1337271673</ID>
+                      <Description>"SecondaryBolt"</Description>
+                      <DropDownListLink>WEAPON_ID</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
+                      <Color>C0C0C0</Color>
                       <VariableType>4 Bytes</VariableType>
                       <Address>GameDataMan</Address>
                       <Offsets>
-                        <Offset>470</Offset>
+                        <Offset>518</Offset>
                         <Offset>08</Offset>
                       </Offsets>
                     </CheatEntry>
                     <CheatEntry>
-                      <ID>1337271326</ID>
-                      <Description>"Arms"</Description>
-                      <ShowAsHex>1</ShowAsHex>
+                      <ID>1337271674</ID>
+                      <Description>"TertiaryArrow"</Description>
+                      <DropDownListLink>WEAPON_ID</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
+                      <Color>C0C0C0</Color>
                       <VariableType>4 Bytes</VariableType>
                       <Address>GameDataMan</Address>
                       <Offsets>
-                        <Offset>474</Offset>
+                        <Offset>51C</Offset>
                         <Offset>08</Offset>
                       </Offsets>
                     </CheatEntry>
                     <CheatEntry>
-                      <ID>1337271327</ID>
-                      <Description>"Legs"</Description>
-                      <ShowAsHex>1</ShowAsHex>
-                      <ShowAsSigned>1</ShowAsSigned>
-                      <VariableType>4 Bytes</VariableType>
-                      <Address>GameDataMan</Address>
-                      <Offsets>
-                        <Offset>478</Offset>
-                        <Offset>08</Offset>
-                      </Offsets>
-                    </CheatEntry>
-                    <CheatEntry>
-                      <ID>1337271329</ID>
-                      <Description>"Booster"</Description>
-                      <ShowAsHex>1</ShowAsHex>
-                      <ShowAsSigned>1</ShowAsSigned>
-                      <VariableType>4 Bytes</VariableType>
-                      <Address>GameDataMan</Address>
-                      <Offsets>
-                        <Offset>480</Offset>
-                        <Offset>08</Offset>
-                      </Offsets>
-                    </CheatEntry>
-                    <CheatEntry>
-                      <ID>1337271330</ID>
-                      <Description>"FCS"</Description>
-                      <ShowAsHex>1</ShowAsHex>
-                      <ShowAsSigned>1</ShowAsSigned>
-                      <VariableType>4 Bytes</VariableType>
-                      <Address>GameDataMan</Address>
-                      <Offsets>
-                        <Offset>484</Offset>
-                        <Offset>08</Offset>
-                      </Offsets>
-                    </CheatEntry>
-                    <CheatEntry>
-                      <ID>1337271331</ID>
-                      <Description>"Generator"</Description>
-                      <ShowAsHex>1</ShowAsHex>
-                      <ShowAsSigned>1</ShowAsSigned>
-                      <VariableType>4 Bytes</VariableType>
-                      <Address>GameDataMan</Address>
-                      <Offsets>
-                        <Offset>488</Offset>
-                        <Offset>08</Offset>
-                      </Offsets>
-                    </CheatEntry>
-                    <CheatEntry>
-                      <ID>1337271332</ID>
+                      <ID>1337271675</ID>
                       <Description>"Expansion"</Description>
-                      <ShowAsHex>1</ShowAsHex>
+                      <DropDownListLink>WEAPON_ID</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
                       <VariableType>4 Bytes</VariableType>
                       <Address>GameDataMan</Address>
                       <Offsets>
-                        <Offset>450</Offset>
+                        <Offset>520</Offset>
+                        <Offset>08</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271676</ID>
+                      <Description>""</Description>
+                      <DropDownListLink>WEAPON_ID</DropDownListLink>
+                      <ShowAsSigned>1</ShowAsSigned>
+                      <Color>C0C0C0</Color>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>GameDataMan</Address>
+                      <Offsets>
+                        <Offset>524</Offset>
+                        <Offset>08</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271677</ID>
+                      <Description>""</Description>
+                      <DropDownListLink>WEAPON_ID</DropDownListLink>
+                      <ShowAsSigned>1</ShowAsSigned>
+                      <Color>C0C0C0</Color>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>GameDataMan</Address>
+                      <Offsets>
+                        <Offset>528</Offset>
+                        <Offset>08</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271678</ID>
+                      <Description>""</Description>
+                      <DropDownListLink>WEAPON_ID</DropDownListLink>
+                      <ShowAsSigned>1</ShowAsSigned>
+                      <Color>C0C0C0</Color>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>GameDataMan</Address>
+                      <Offsets>
+                        <Offset>52C</Offset>
+                        <Offset>08</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271679</ID>
+                      <Description>""</Description>
+                      <DropDownListLink>WEAPON_ID</DropDownListLink>
+                      <ShowAsSigned>1</ShowAsSigned>
+                      <Color>C0C0C0</Color>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>GameDataMan</Address>
+                      <Offsets>
+                        <Offset>530</Offset>
+                        <Offset>08</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271680</ID>
+                      <Description>""</Description>
+                      <DropDownListLink>WEAPON_ID</DropDownListLink>
+                      <ShowAsSigned>1</ShowAsSigned>
+                      <Color>C0C0C0</Color>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>GameDataMan</Address>
+                      <Offsets>
+                        <Offset>534</Offset>
+                        <Offset>08</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271681</ID>
+                      <Description>""</Description>
+                      <DropDownListLink>WEAPON_ID</DropDownListLink>
+                      <ShowAsSigned>1</ShowAsSigned>
+                      <Color>C0C0C0</Color>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>GameDataMan</Address>
+                      <Offsets>
+                        <Offset>538</Offset>
+                        <Offset>08</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271682</ID>
+                      <Description>"Head"</Description>
+                      <DropDownListLink>PROTECTOR_ID</DropDownListLink>
+                      <ShowAsSigned>1</ShowAsSigned>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>GameDataMan</Address>
+                      <Offsets>
+                        <Offset>53C</Offset>
+                        <Offset>08</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271683</ID>
+                      <Description>"Core"</Description>
+                      <DropDownListLink>PROTECTOR_ID</DropDownListLink>
+                      <ShowAsSigned>1</ShowAsSigned>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>GameDataMan</Address>
+                      <Offsets>
+                        <Offset>540</Offset>
+                        <Offset>08</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271684</ID>
+                      <Description>"Arms"</Description>
+                      <DropDownListLink>PROTECTOR_ID</DropDownListLink>
+                      <ShowAsSigned>1</ShowAsSigned>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>GameDataMan</Address>
+                      <Offsets>
+                        <Offset>544</Offset>
+                        <Offset>08</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271685</ID>
+                      <Description>"Legs"</Description>
+                      <DropDownListLink>PROTECTOR_ID</DropDownListLink>
+                      <ShowAsSigned>1</ShowAsSigned>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>GameDataMan</Address>
+                      <Offsets>
+                        <Offset>548</Offset>
+                        <Offset>08</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271686</ID>
+                      <Description>"Hair"</Description>
+                      <DropDownListLink>PROTECTOR_ID</DropDownListLink>
+                      <ShowAsSigned>1</ShowAsSigned>
+                      <Color>C0C0C0</Color>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>GameDataMan</Address>
+                      <Offsets>
+                        <Offset>54C</Offset>
+                        <Offset>08</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271687</ID>
+                      <Description>"Booster"</Description>
+                      <DropDownListLink>BOOSTER_ID</DropDownListLink>
+                      <ShowAsSigned>1</ShowAsSigned>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>GameDataMan</Address>
+                      <Offsets>
+                        <Offset>550</Offset>
+                        <Offset>08</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271688</ID>
+                      <Description>"Generator"</Description>
+                      <DropDownListLink>GENERATOR_ID</DropDownListLink>
+                      <ShowAsSigned>1</ShowAsSigned>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>GameDataMan</Address>
+                      <Offsets>
+                        <Offset>554</Offset>
+                        <Offset>08</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271689</ID>
+                      <Description>"FCS"</Description>
+                      <DropDownListLink>FCS_ID</DropDownListLink>
+                      <ShowAsSigned>1</ShowAsSigned>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>GameDataMan</Address>
+                      <Offsets>
+                        <Offset>558</Offset>
+                        <Offset>08</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271690</ID>
+                      <Description>"Accessory"</Description>
+                      <DropDownListLink>ACCESSORY_ID</DropDownListLink>
+                      <ShowAsSigned>1</ShowAsSigned>
+                      <Color>C0C0C0</Color>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>GameDataMan</Address>
+                      <Offsets>
+                        <Offset>55C</Offset>
+                        <Offset>08</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271691</ID>
+                      <Description>"Accessory"</Description>
+                      <DropDownListLink>ACCESSORY_ID</DropDownListLink>
+                      <ShowAsSigned>1</ShowAsSigned>
+                      <Color>C0C0C0</Color>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>GameDataMan</Address>
+                      <Offsets>
+                        <Offset>560</Offset>
                         <Offset>08</Offset>
                       </Offsets>
                     </CheatEntry>

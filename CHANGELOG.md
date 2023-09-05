@@ -5,6 +5,8 @@
  - OS Tuning, with scripts to max or reset all
  - Dropdowns for AddItem and helpers
  - Helpers for EquipParamBooster, EquipParamFcs, EquipParamGenerator
+### Changed
+ - Replaced ChrAsm
 ### Fixed
  - Wrong steam app id in steam_appid.txt
 
