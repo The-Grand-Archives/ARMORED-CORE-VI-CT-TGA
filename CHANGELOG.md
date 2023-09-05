@@ -3,6 +3,9 @@
 ### Added
  - Bullet_NpcHelper
  - OS Tuning, with scripts to max or reset all
+ - Dropdowns for AddItem and helpers
+### Fixed
+ - Wrong steam app id in steam_appid.txt
 
 ## [v0.1.0] - 2023-08-28
 ### Added
