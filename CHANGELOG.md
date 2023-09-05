@@ -3,7 +3,7 @@
 ### Added
  - Bullet_NpcHelper
  - OS Tuning, with scripts to max or reset all
- - Dropdowns for AddItem and helpers
+ - Dropdowns for AddItem, helpers, and Weapon Info
  - Helpers for EquipParamBooster, EquipParamFcs, EquipParamGenerator
 ### Changed
  - Replaced ChrAsm

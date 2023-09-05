@@ -2123,6 +2123,7 @@ Credits are listed on the Github!
                         <CheatEntry>
                           <ID>1337271468</ID>
                           <Description>"ID"</Description>
+                          <DropDownListLink>WEAPON_ID</DropDownListLink>
                           <ShowAsSigned>1</ShowAsSigned>
                           <VariableType>4 Bytes</VariableType>
                           <Address>+20</Address>
@@ -2194,6 +2195,7 @@ Credits are listed on the Github!
                         <CheatEntry>
                           <ID>1337271498</ID>
                           <Description>"ID"</Description>
+                          <DropDownListLink>WEAPON_ID</DropDownListLink>
                           <ShowAsSigned>1</ShowAsSigned>
                           <VariableType>4 Bytes</VariableType>
                           <Address>+20</Address>
@@ -2265,6 +2267,7 @@ Credits are listed on the Github!
                         <CheatEntry>
                           <ID>1337271499</ID>
                           <Description>"ID"</Description>
+                          <DropDownListLink>WEAPON_ID</DropDownListLink>
                           <ShowAsSigned>1</ShowAsSigned>
                           <VariableType>4 Bytes</VariableType>
                           <Address>+20</Address>
@@ -2336,6 +2339,7 @@ Credits are listed on the Github!
                         <CheatEntry>
                           <ID>1337271500</ID>
                           <Description>"ID"</Description>
+                          <DropDownListLink>WEAPON_ID</DropDownListLink>
                           <ShowAsSigned>1</ShowAsSigned>
                           <VariableType>4 Bytes</VariableType>
                           <Address>+20</Address>
