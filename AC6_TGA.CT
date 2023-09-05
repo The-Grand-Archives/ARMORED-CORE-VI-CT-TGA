@@ -9900,6 +9900,1898 @@ unregistersymbol(EquipParamGoodsHelper)
                       </CheatEntries>
                     </CheatEntry>
                     <CheatEntry>
+                      <ID>1337271696</ID>
+                      <Description>"EquipParamBooster"</Description>
+                      <Options moHideChildren="1"/>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+alloc(EquipParamBoosterHelper,16)
+registersymbol(EquipParamBoosterHelper)
+
+EquipParamBoosterHelper:
+dq #60000000
+
+[DISABLE]
+dealloc(EquipParamBoosterHelper)
+unregistersymbol(EquipParamBoosterHelper)
+</AssemblerScript>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>1337271697</ID>
+                          <Description>"Name"</Description>
+                          <DropDownListLink>BOOSTER_ID</DropDownListLink>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>8 Bytes</VariableType>
+                          <Address>EquipParamBoosterHelper</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337271698</ID>
+                          <Description>"ID"</Description>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>8 Bytes</VariableType>
+                          <Address>EquipParamBoosterHelper</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337271699</ID>
+                          <Description>""</Description>
+                          <ShowAsHex>1</ShowAsHex>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>Array of byte</VariableType>
+                          <ByteLength>0</ByteLength>
+                          <Address>EquipParamBoosterHelper+8</Address>
+                          <Offsets>
+                            <Offset>0</Offset>
+                          </Offsets>
+                          <CheatEntries>
+                            <CheatEntry>
+                              <ID>1337271988</ID>
+                              <Description>"disableParam_NT"</Description>
+                              <ShowAsSigned>0</ShowAsSigned>
+                              <Color>C0C0C0</Color>
+                              <VariableType>Binary</VariableType>
+                              <BitStart>0</BitStart>
+                              <BitLength>1</BitLength>
+                              <ShowAsBinary>0</ShowAsBinary>
+                              <Address>+00</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271989</ID>
+                              <Description>"disableParamReserve"</Description>
+                              <ShowAsSigned>0</ShowAsSigned>
+                              <Color>C0C0C0</Color>
+                              <VariableType>Binary</VariableType>
+                              <BitStart>1</BitStart>
+                              <BitLength>7</BitLength>
+                              <ShowAsBinary>0</ShowAsBinary>
+                              <Address>+00</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271990</ID>
+                              <Description>"disableParamReserve2"</Description>
+                              <ShowAsHex>1</ShowAsHex>
+                              <ShowAsSigned>0</ShowAsSigned>
+                              <Color>C0C0C0</Color>
+                              <VariableType>Array of byte</VariableType>
+                              <ByteLength>3</ByteLength>
+                              <Address>+01</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271803</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>2 Bytes</VariableType>
+                              <Address>+4</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271804</ID>
+                              <Description>"modelId"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>2 Bytes</VariableType>
+                              <Address>+6</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271805</ID>
+                              <Description>"sortId"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+8</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271806</ID>
+                              <Description>"weight"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271807</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+10</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271808</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+14</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271809</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+18</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271810</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+1C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271811</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+20</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271812</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+24</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271813</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+28</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271814</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+2C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271815</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+30</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271816</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+34</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271817</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+38</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271818</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+3C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271819</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+40</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271820</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+44</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271821</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+48</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271822</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+4C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271823</ID>
+                              <Description>"Upward EN Consumption"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+50</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271824</ID>
+                              <Description>"QB EN Consumption"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+54</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271825</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+58</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271826</ID>
+                              <Description>"QB Jet Duration"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+5C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271827</ID>
+                              <Description>"Boost Speed"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+60</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271828</ID>
+                              <Description>"Thrust"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+64</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271829</ID>
+                              <Description>"QB Thrust"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+68</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271830</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+6C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271831</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+70</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271832</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+74</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271833</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+78</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271834</ID>
+                              <Description>"basicPrice"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+7C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271835</ID>
+                              <Description>"sellValue"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+80</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271836</ID>
+                              <Description>"QB Reload Time"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+84</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271837</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+88</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271838</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+8C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271839</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+90</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271840</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+94</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271841</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+98</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271842</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+9C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271843</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+A0</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271844</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+A4</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271845</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+A8</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271846</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+AC</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271847</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+B0</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271848</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+B4</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271849</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+B8</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271850</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+BC</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271851</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+C0</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271852</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+C4</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271853</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+C8</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271854</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+CC</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271855</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+D0</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271856</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+D4</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271857</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+D8</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271858</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+DC</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271859</ID>
+                              <Description>"Upward Thrust"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+E0</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271860</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+E4</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271861</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+E8</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271862</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+EC</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271863</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+F0</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271864</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+F4</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271865</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+F8</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271866</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+FC</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271867</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+100</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271868</ID>
+                              <Description>"AB Thrust"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+104</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271869</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+108</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271870</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+10C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271871</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+110</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271872</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+114</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271873</ID>
+                              <Description>"AB EN Consumption"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+118</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271874</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>2 Bytes</VariableType>
+                              <Address>+11C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271997</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>2 Bytes</VariableType>
+                              <Address>+11E</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271875</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+120</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271876</ID>
+                              <Description>"Melee Attack Thrust"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+124</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271877</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+128</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271878</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+12C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271879</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+130</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271880</ID>
+                              <Description>"Melee Atk. EN Consump."</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+134</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271881</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+138</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271882</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+13C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271883</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+140</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271884</ID>
+                              <Description>"QB Reload Ideal Weight"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+144</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271885</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+148</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271886</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+14C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271887</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+150</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271888</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+154</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271889</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+158</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271890</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+15C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271891</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+160</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271892</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+164</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271893</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+168</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271894</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+16C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271895</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+170</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271896</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+174</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271897</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+178</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271898</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+17C</Address>
+                            </CheatEntry>
+                          </CheatEntries>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271701</ID>
+                      <Description>"EquipParamFcs"</Description>
+                      <Options moHideChildren="1"/>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+alloc(EquipParamFcsHelper,16)
+registersymbol(EquipParamFcsHelper)
+
+EquipParamFcsHelper:
+dq #70000000
+
+[DISABLE]
+dealloc(EquipParamFcsHelper)
+unregistersymbol(EquipParamFcsHelper)
+</AssemblerScript>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>1337271702</ID>
+                          <Description>"Name"</Description>
+                          <DropDownListLink>FCS_ID</DropDownListLink>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>8 Bytes</VariableType>
+                          <Address>EquipParamFcsHelper</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337271703</ID>
+                          <Description>"ID"</Description>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>8 Bytes</VariableType>
+                          <Address>EquipParamFcsHelper</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337271704</ID>
+                          <Description>""</Description>
+                          <ShowAsHex>1</ShowAsHex>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>Array of byte</VariableType>
+                          <ByteLength>0</ByteLength>
+                          <Address>EquipParamFcsHelper+8</Address>
+                          <Offsets>
+                            <Offset>0</Offset>
+                          </Offsets>
+                          <CheatEntries>
+                            <CheatEntry>
+                              <ID>1337271991</ID>
+                              <Description>"disableParam_NT"</Description>
+                              <ShowAsSigned>0</ShowAsSigned>
+                              <Color>C0C0C0</Color>
+                              <VariableType>Binary</VariableType>
+                              <BitStart>0</BitStart>
+                              <BitLength>1</BitLength>
+                              <ShowAsBinary>0</ShowAsBinary>
+                              <Address>+00</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271992</ID>
+                              <Description>"disableParamReserve"</Description>
+                              <ShowAsSigned>0</ShowAsSigned>
+                              <Color>C0C0C0</Color>
+                              <VariableType>Binary</VariableType>
+                              <BitStart>1</BitStart>
+                              <BitLength>7</BitLength>
+                              <ShowAsBinary>0</ShowAsBinary>
+                              <Address>+00</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271993</ID>
+                              <Description>"disableParamReserve2"</Description>
+                              <ShowAsHex>1</ShowAsHex>
+                              <ShowAsSigned>0</ShowAsSigned>
+                              <Color>C0C0C0</Color>
+                              <VariableType>Array of byte</VariableType>
+                              <ByteLength>3</ByteLength>
+                              <Address>+01</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271749</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>2 Bytes</VariableType>
+                              <Address>+04</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271987</ID>
+                              <Description>"modelId"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>2 Bytes</VariableType>
+                              <Address>+06</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271750</ID>
+                              <Description>"sortId"</Description>
+                              <ShowAsSigned>0</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+08</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271751</ID>
+                              <Description>"weight"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+0C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271753</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+10</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271754</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+14</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271755</ID>
+                              <Description>"EN Load"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+18</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271756</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+1C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271757</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+20</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271758</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+24</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271759</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+28</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271760</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+2C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271761</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+30</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271762</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+34</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271763</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>2 Bytes</VariableType>
+                              <Address>+38</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271801</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>2 Bytes</VariableType>
+                              <Address>+38</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271764</ID>
+                              <Description>"basicPrice"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+3C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271765</ID>
+                              <Description>"sellValue"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+40</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271766</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+44</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271767</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+48</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271768</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+4C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271769</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+50</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271770</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+54</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271771</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+58</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271772</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+5C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271773</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+60</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271774</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+64</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271775</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+68</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271776</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+6C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271777</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+70</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271778</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+74</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271779</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+78</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271780</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+7C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271781</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+80</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271782</ID>
+                              <Description>"Missile Lock Correction"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+84</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271783</ID>
+                              <Description>"Multi-Lock Correction"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+88</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271784</ID>
+                              <Description>"fcsParamId"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+8C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271785</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+90</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271786</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+94</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271787</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+98</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271788</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+9C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271789</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+A0</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271790</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+A4</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271791</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+A8</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271792</ID>
+                              <Description>"Close-Range Assist"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+AC</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271793</ID>
+                              <Description>"Close-Range Assist"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+B0</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271794</ID>
+                              <Description>"Medium-Range Assist"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+B4</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271795</ID>
+                              <Description>"Medium-Range Assist"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+B8</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271796</ID>
+                              <Description>"Long-Range Assist"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+BC</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271797</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+C0</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271798</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+C4</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271799</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+C8</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271800</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+CC</Address>
+                            </CheatEntry>
+                          </CheatEntries>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337271706</ID>
+                      <Description>"EquipParamGenerator"</Description>
+                      <Options moHideChildren="1"/>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+alloc(EquipParamGeneratorHelper,16)
+registersymbol(EquipParamGeneratorHelper)
+
+EquipParamGeneratorHelper:
+dq #65000000
+
+[DISABLE]
+dealloc(EquipParamGeneratorHelper)
+unregistersymbol(EquipParamGeneratorHelper)
+</AssemblerScript>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>1337271707</ID>
+                          <Description>"Name"</Description>
+                          <DropDownListLink>GENERATOR_ID</DropDownListLink>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>8 Bytes</VariableType>
+                          <Address>EquipParamGeneratorHelper</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337271708</ID>
+                          <Description>"ID"</Description>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>8 Bytes</VariableType>
+                          <Address>EquipParamGeneratorHelper</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337271709</ID>
+                          <Description>""</Description>
+                          <ShowAsHex>1</ShowAsHex>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>Array of byte</VariableType>
+                          <ByteLength>0</ByteLength>
+                          <Address>EquipParamGeneratorHelper+8</Address>
+                          <Offsets>
+                            <Offset>0</Offset>
+                          </Offsets>
+                          <CheatEntries>
+                            <CheatEntry>
+                              <ID>1337271994</ID>
+                              <Description>"disableParam_NT"</Description>
+                              <ShowAsSigned>0</ShowAsSigned>
+                              <Color>C0C0C0</Color>
+                              <VariableType>Binary</VariableType>
+                              <BitStart>0</BitStart>
+                              <BitLength>1</BitLength>
+                              <ShowAsBinary>0</ShowAsBinary>
+                              <Address>+00</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271995</ID>
+                              <Description>"disableParamReserve"</Description>
+                              <ShowAsSigned>0</ShowAsSigned>
+                              <Color>C0C0C0</Color>
+                              <VariableType>Binary</VariableType>
+                              <BitStart>1</BitStart>
+                              <BitLength>7</BitLength>
+                              <ShowAsBinary>0</ShowAsBinary>
+                              <Address>+00</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271996</ID>
+                              <Description>"disableParamReserve2"</Description>
+                              <ShowAsHex>1</ShowAsHex>
+                              <ShowAsSigned>0</ShowAsSigned>
+                              <Color>C0C0C0</Color>
+                              <VariableType>Array of byte</VariableType>
+                              <ByteLength>3</ByteLength>
+                              <Address>+01</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271900</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>2 Bytes</VariableType>
+                              <Address>+4</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271983</ID>
+                              <Description>"modelId"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>2 Bytes</VariableType>
+                              <Address>+6</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271901</ID>
+                              <Description>"sortId"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+8</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271902</ID>
+                              <Description>"weight"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271903</ID>
+                              <Description>"EN Capacity"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+10</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271904</ID>
+                              <Description>"EN Output"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+14</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271905</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+18</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271984</ID>
+                              <Description>"EN Recharge"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+1C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271906</ID>
+                              <Description>"Supply Recovery"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+20</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271907</ID>
+                              <Description>"Post-Recovery EN Supply"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>Float</VariableType>
+                              <Address>+24</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271908</ID>
+                              <Description>"Energy FireArm Spec."</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+28</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271909</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+2C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271910</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+30</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271911</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+34</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271912</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>2 Bytes</VariableType>
+                              <Address>+38</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271985</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>2 Bytes</VariableType>
+                              <Address>+3A</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271913</ID>
+                              <Description>"basicPrice"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+3C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271914</ID>
+                              <Description>"sellValue"</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+40</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271915</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+44</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271916</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+48</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271917</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+4C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271918</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+50</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271919</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+54</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271920</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+58</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271921</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+5C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271922</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+60</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271923</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+64</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271924</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+68</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271925</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+6C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271926</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+70</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271927</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+74</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271928</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+78</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271929</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+7C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271930</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+80</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271931</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+84</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271932</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+88</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271933</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+8C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271934</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+90</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271935</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+94</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271936</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+98</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271937</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+9C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271938</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+A0</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271939</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+A4</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271940</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+A8</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271941</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+AC</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271942</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+B0</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271943</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+B4</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271944</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+B8</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271945</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+BC</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271946</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+C0</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271947</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+C4</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271948</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+C8</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271949</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+CC</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271950</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+D0</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271951</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+D4</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271952</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+D8</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271953</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+DC</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271954</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+E0</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271955</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+E4</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271956</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+E8</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271957</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+EC</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271958</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+F0</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271959</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+F4</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271960</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+F8</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271961</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+FC</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271962</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+100</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271963</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+104</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271964</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+108</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271965</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+10C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271966</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+110</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271967</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+114</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271968</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+118</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271969</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+11C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271970</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+120</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271971</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+124</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271972</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+128</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271973</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+12C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271974</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+130</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271975</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+134</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271976</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+138</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271977</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+13C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271978</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+140</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271979</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+144</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271980</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+148</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271981</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+14C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337271982</ID>
+                              <Description>""</Description>
+                              <ShowAsSigned>1</ShowAsSigned>
+                              <VariableType>4 Bytes</VariableType>
+                              <Address>+150</Address>
+                            </CheatEntry>
+                          </CheatEntries>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                    <CheatEntry>
                       <ID>1337259033</ID>
                       <Description>"EquipMtrlSetParam"</Description>
                       <Options moHideChildren="1"/>
@@ -36243,7 +38135,6 @@ int on_disable() {
                 <CheatEntry>
                   <ID>1337271692</ID>
                   <Description>"ACCESSORY_ID"</Description>
-                  <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1"></DropDownList>
                   <GroupHeader>1</GroupHeader>
                 </CheatEntry>
                 <CheatEntry>
