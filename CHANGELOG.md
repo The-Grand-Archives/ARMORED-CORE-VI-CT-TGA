@@ -1,10 +1,11 @@
 # Changelog
 ## [Unreleased]
+
+## [v0.2.0] - 2023-09-05
 ### Added
- - Bullet_NpcHelper
  - OS Tuning, with scripts to max or reset all
  - Dropdowns for AddItem, helpers, and Weapon Info
- - Helpers for EquipParamBooster, EquipParamFcs, EquipParamGenerator
+ - Helpers for Bullet_NpcHelper, EquipParamBooster, EquipParamFcs, EquipParamGenerator
 ### Changed
  - Replaced ChrAsm
 ### Fixed
@@ -31,5 +32,6 @@
      - WIP! Various ID based helpers, lots of incorrect stuff here
 
 
-[unreleased]: https://github.com/The-Grand-Archives/ARMORED-CORE-VI-CT-TGA/compare/v0.1.0...dev
+[unreleased]: https://github.com/The-Grand-Archives/ARMORED-CORE-VI-CT-TGA/compare/v0.2.0...dev
+[v0.2.0]: https://github.com/inunorii/Elden-Ring-CT-TGA/compare/v0.1.0...v0.2.0
 [v0.1.0]: https://github.com/inunorii/Elden-Ring-CT-TGA/releases/tag/v0.1.0
