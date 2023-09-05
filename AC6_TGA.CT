@@ -3224,8 +3224,77 @@ disableMemrec(memrec)
             <CheatEntry>
               <ID>1337271414</ID>
               <Description>"Functions"</Description>
-              <Color>C0C0C0</Color>
+              <Options moHideChildren="1"/>
               <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>1337272002</ID>
+                  <Description>"RemoveItem"</Description>
+                  <Options moHideChildren="1"/>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>{$lua}
+if syntaxcheck then return end
+[ENABLE]
+{$asm}
+alloc(RemoveItem_data,8)
+registerSymbol(RemoveItem_data)
+
+RemoveItem_data:
+dd 00000000
+dd 00000001
+{$lua}
+function RemoveItem(idx, quantity)
+    if quantity ~= nil or quantity &lt;= 1 then
+        local quantity = 1
+    end
+
+    local GameDataMan = readPointer("GameDataMan")
+    local PlayerGameData = readPointer(GameDataMan + 8)
+    local EquipInventoryData = getAddress(PlayerGameData + 0x600)
+    local tailDataIdx = EquipInventoryData + 0x1C
+    local invSlot = idx + readInteger(tailDataIdx)
+
+    return executeCodeEx(0, 100, 0x1404709a0, EquipInventoryData, invSlot, quantity)
+end
+
+[DISABLE]
+RemoveItem = nil
+deAlloc("RemoveItem_data")
+unregisterSymbol("RemoveItem_data")
+
+</AssemblerScript>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>1337272003</ID>
+                      <Description>"Inventory Idx"</Description>
+                      <ShowAsSigned>0</ShowAsSigned>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>RemoveItem_data</Address>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337272005</ID>
+                      <Description>"Quantity"</Description>
+                      <ShowAsSigned>0</ShowAsSigned>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>RemoveItem_data+4</Address>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337272004</ID>
+                      <Description>"&lt;- Remove"</Description>
+                      <Color>FF8000</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>{$lua}
+if syntaxcheck then return end
+[ENABLE]
+RemoveItem(readInteger("RemoveItem_data"),readInteger("RemoveItem_data+4"))
+disableMemrec(memrec)
+[DISABLE]
+
+</AssemblerScript>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
             <CheatEntry>
               <ID>1337271413</ID>
