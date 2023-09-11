@@ -1,5 +1,7 @@
 # Changelog
 ## [Unreleased]
+### Added
+ - Hero -> GameData -> Paint
 
 ## [v0.3.0] - 2023-09-11
 ### Added
