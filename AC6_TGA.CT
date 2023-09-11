@@ -712,7 +712,7 @@ end
 
 function address_version(script_ver)
   if current_game_ver ~= script_ver then
-      e = "The addresses used by this script only work for\n"..game_title.." app ver "..script_ver
+      e = "The addresses used by this script only work for\n"..game_title.." executable version "..script_ver
       ShowMessage(e)
       error(e,2)
   end
@@ -3243,18 +3243,20 @@ RemoveItem_data:
 dd 00000000
 dd 00000001
 {$lua}
+local func_addr = AOBScanModuleUnique(process,"8b f2 ?? 8b e9 ?? 85 c0 74")
+
 function RemoveItem(idx, quantity)
-    if quantity ~= nil or quantity &lt;= 1 then
-        local quantity = 1
+	if quantity ~= nil or quantity &lt;= 1 then
+		local quantity = 1
     end
 
-    local GameDataMan = readPointer("GameDataMan")
-    local PlayerGameData = readPointer(GameDataMan + 8)
-    local EquipInventoryData = getAddress(PlayerGameData + 0x600)
-    local tailDataIdx = EquipInventoryData + 0x1C
-    local invSlot = idx + readInteger(tailDataIdx)
+	local GameDataMan = readPointer("GameDataMan")
+	local PlayerGameData = readPointer(GameDataMan + 8)
+	local EquipInventoryData = getAddress(PlayerGameData + 0x600)
+	local tailDataIdx = EquipInventoryData + 0x1C
+	local invSlot = idx + readInteger(tailDataIdx)
 
-    return executeCodeEx(0, 100, 0x1404709a0, EquipInventoryData, invSlot, quantity)
+	return executeCodeEx(0, 100, func_addr, EquipInventoryData, invSlot, quantity)
 end
 
 [DISABLE]
