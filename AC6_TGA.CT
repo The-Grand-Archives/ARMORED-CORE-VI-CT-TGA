@@ -3003,7 +3003,7 @@ for i=0,inventoryNum do
     itemId = itemId - itemType[1]
     local quantity = readInteger(item + 8)
     if itemId ~= 0xFFFFFFFF and itemId ~= nil and quantity ~= nil then
-        print(string.format("#%d | Type: %s | ID: %d | Quantity: %d",i, itemType[2], itemId, quantity))
+        print(string.format("#%d | Type: %s | ID: %d | Quantity: %d", i, itemType[2], itemId, quantity))
     end
 end
 
@@ -3266,6 +3266,26 @@ unregisterSymbol("RemoveItem_data")
 
 </AssemblerScript>
                   <CheatEntries>
+                    <CheatEntry>
+                      <ID>1337272730</ID>
+                      <Description>"How to use"</Description>
+                      <Color>FF8000</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>{$lua}
+if syntaxcheck then return end
+[ENABLE]
+showText("How to RemoveItem",[[1. Go into Hero -&gt; GameData -&gt; EquipInventoryData
+2. Either navigate the inventory using the scripts at the start,
+   change Idx directly, or use the "Print Inventory" script to
+   find idx (inventory slot) of your item
+3. Change Inventory Idx under RemoveItem to the idx you found
+4. Adjust quantity as needed
+5. Enable "&lt;- Remove" script
+]])
+disableMemrec(memrec)
+[DISABLE]
+</AssemblerScript>
+                    </CheatEntry>
                     <CheatEntry>
                       <ID>1337272003</ID>
                       <Description>"Inventory Idx"</Description>
