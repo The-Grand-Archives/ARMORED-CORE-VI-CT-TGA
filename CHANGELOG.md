@@ -1,7 +1,12 @@
 # Changelog
 ## [Unreleased]
-### ADded
+### Added
  - Functions -> RemoveItem
+ - LOGO_ID dropdown
+### Changed
+ - Dropdowns updated and ordered the same way as game's param ID tables
+ - Helpers updated with all in-game visible values: EquipParamProtector, EquipParamBooster, EquipParamFcs, EquipParamGenerator
+ - Supported game version to executable 1.01.2 / app ver. 22
 
 ## [v0.2.0] - 2023-09-05
 ### Added
