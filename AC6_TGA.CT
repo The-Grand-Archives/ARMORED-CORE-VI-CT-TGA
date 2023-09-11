@@ -6,7 +6,7 @@
   <CheatEntries>
     <CheatEntry>
       <ID>0</ID>
-      <Description>"Open - The Grand Archives v0.2.0 - ARMORED CORE VI app ver. 22"</Description>
+      <Description>"Open - The Grand Archives v0.3.0 - ARMORED CORE VI v1.01.2 / App Ver. 22"</Description>
       <Options moHideChildren="1"/>
       <VariableType>Auto Assembler Script</VariableType>
       <AssemblerScript>{$lua}

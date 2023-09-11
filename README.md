@@ -18,7 +18,7 @@ Our community, make sure to read the rules carefully.
 ### Requirements
 
 Cheat Engine: [7.5](https://github.com/cheat-engine/cheat-engine/releases)  
-Game: App ver. 20
+Game: Executable v1.01.2 / App Ver. 22
 
 ## How to use
 

@@ -1,5 +1,7 @@
 # Changelog
 ## [Unreleased]
+
+## [v0.3.0] - 2023-09-11
 ### Added
  - Functions -> RemoveItem
  - LOGO_ID dropdown
@@ -39,6 +41,7 @@
      - WIP! Various ID based helpers, lots of incorrect stuff here
 
 
-[unreleased]: https://github.com/The-Grand-Archives/ARMORED-CORE-VI-CT-TGA/compare/v0.2.0...dev
+[unreleased]: https://github.com/The-Grand-Archives/ARMORED-CORE-VI-CT-TGA/compare/v0.3.0...dev
+[v0.2.0]: https://github.com/inunorii/Elden-Ring-CT-TGA/compare/v0.2.0...v0.3.0
 [v0.2.0]: https://github.com/inunorii/Elden-Ring-CT-TGA/compare/v0.1.0...v0.2.0
 [v0.1.0]: https://github.com/inunorii/Elden-Ring-CT-TGA/releases/tag/v0.1.0
