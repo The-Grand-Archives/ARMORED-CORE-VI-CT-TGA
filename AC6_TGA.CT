@@ -6,7 +6,7 @@
   <CheatEntries>
     <CheatEntry>
       <ID>0</ID>
-      <Description>"Open - The Grand Archives v0.3.0 - ARMORED CORE VI v1.01.2 / App Ver. 22"</Description>
+      <Description>"Open - The Grand Archives v0.4.0 - ARMORED CORE VI v1.01.2 / App Ver. 22"</Description>
       <Options moHideChildren="1"/>
       <VariableType>Auto Assembler Script</VariableType>
       <AssemblerScript>{$lua}
@@ -27,7 +27,7 @@ end
 
 game_title = "ARMORED CORE VI FIRES OF RUBICON"
 game_ver = "1.01.2"  -- app ver. 22
-table_ver = 0.031
+table_ver = 0.04
 ce_ver = 7.5
 local version_url = "https://raw.githubusercontent.com/The-Grand-Archives/ARMORED-CORE-VI-CT-TGA/main/VERSION"
 
