@@ -6,7 +6,7 @@
   <CheatEntries>
     <CheatEntry>
       <ID>0</ID>
-      <Description>"Open - The Grand Archives v0.4.0 - ARMORED CORE VI v1.01.2 / App Ver. 22"</Description>
+      <Description>"Open - The Grand Archives v0.4.1 - ARMORED CORE VI v1.02 / App Ver. 30"</Description>
       <Options moHideChildren="1"/>
       <VariableType>Auto Assembler Script</VariableType>
       <AssemblerScript>{$lua}
@@ -26,8 +26,8 @@ if not getAddressSafe(process) then
 end
 
 game_title = "ARMORED CORE VI FIRES OF RUBICON"
-game_ver = "1.01.2"  -- app ver. 22
-table_ver = 0.04
+game_ver = "1.02"  -- app ver. 30
+table_ver = 0.041
 ce_ver = 7.5
 local version_url = "https://raw.githubusercontent.com/The-Grand-Archives/ARMORED-CORE-VI-CT-TGA/main/VERSION"
 

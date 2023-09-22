@@ -1,6 +1,10 @@
 # Changelog
 ## [Unreleased]
 
+## [v0.4.1] - 2023-09-22
+### Changed
+ - Supported game version to executable 1.02 / app ver. 30
+
 ## [v0.4.0] - 2023-09-15
 ### Added
  - Hero -> GameData -> Paint
