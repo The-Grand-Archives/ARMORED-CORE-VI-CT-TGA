@@ -20,7 +20,7 @@ If it doesn't work, try this [alternative invite](https://discord.gg/2RTW6BFgeX)
 ### Requirements
 
 Cheat Engine: [7.5](https://github.com/cheat-engine/cheat-engine/releases)  
-Game: Executable v1.01.2 / App Ver. 22
+Game: Executable v1.04 / App Ver. 40
 
 ## How to use
 

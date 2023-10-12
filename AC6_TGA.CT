@@ -6,7 +6,7 @@
   <CheatEntries>
     <CheatEntry>
       <ID>0</ID>
-      <Description>"Open - The Grand Archives v0.4.1 - ARMORED CORE VI v1.02 / App Ver. 30"</Description>
+      <Description>"Open - The Grand Archives v0.4.2 - ARMORED CORE VI v1.04 / App Ver. 40"</Description>
       <Options moHideChildren="1"/>
       <VariableType>Auto Assembler Script</VariableType>
       <AssemblerScript>{$lua}
@@ -26,8 +26,8 @@ if not getAddressSafe(process) then
 end
 
 game_title = "ARMORED CORE VI FIRES OF RUBICON"
-game_ver = "1.02"  -- app ver. 30
-table_ver = 0.041
+game_ver = "1.04"  -- app ver. 40
+table_ver = 0.042
 ce_ver = 7.5
 local version_url = "https://raw.githubusercontent.com/The-Grand-Archives/ARMORED-CORE-VI-CT-TGA/main/VERSION"
 
@@ -2103,7 +2103,7 @@ Credits are listed on the Github!
                 </CheatEntry>
                 <CheatEntry>
                   <ID>1337271464</ID>
-                  <Description>"Weapon Info"</Description>
+                  <Description>"ChrWeaponModule"</Description>
                   <Options moHideChildren="1"/>
                   <GroupHeader>1</GroupHeader>
                   <CheatEntries>
@@ -12219,7 +12219,7 @@ end
                         <CheatEntry>
                           <ID>1337213382</ID>
                           <Description>"Item"</Description>
-                          <DropDownListLink>ItemDropdown</DropDownListLink>
+                          <DropDownListLink>ITEM_ID</DropDownListLink>
                           <ShowAsHex>1</ShowAsHex>
                           <ShowAsSigned>1</ShowAsSigned>
                           <VariableType>4 Bytes</VariableType>
@@ -12245,17 +12245,8 @@ end
                             </CheatEntry>
                             <CheatEntry>
                               <ID>1337213387</ID>
-                              <Description>"Type"</Description>
-                              <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:Weapon
-1:Protector
-2:Accessory
-4:Goods
-5:Fcs
-6:Booster
-7:Generator
-8:Expansion
-15:None
-</DropDownList>
+                              <Description>"EquipType"</Description>
+                              <DropDownListLink>ITEM_TYPE</DropDownListLink>
                               <ShowAsSigned>0</ShowAsSigned>
                               <VariableType>Binary</VariableType>
                               <BitStart>4</BitStart>
@@ -12325,13 +12316,11 @@ local function get_type(id)
         fcs = {0x50000000, "Fcs"},
         booster = {0x60000000, "Booster"},
         generator = {0x70000000, "Generator"},
-        expansion = {0x80000000, "Expansion"}
+        invalid = {0x7FFFFFFF, "None"}
     }
 
-    if id &gt;= types.expansion[1] then
-        return types.expansion
-    elseif id &gt;= types.generator[1] then
-        return types.generator
+    if id &gt;= types.invalid[1] then
+        return types.invalid
     elseif id &gt;= types.booster[1] then
         return types.booster
     elseif id &gt;= types.fcs[1] then
@@ -12362,7 +12351,7 @@ for i=0,inventoryNum do
     local itemType = get_type(itemId)
     itemId = itemId - itemType[1]
     local quantity = readInteger(item + 8)
-    if itemId ~= 0xFFFFFFFF and itemId ~= nil and quantity ~= nil then
+    if itemId &lt;= 0x7FFFFFFF and itemId ~= nil and quantity ~= nil then
         print(string.format("#%d | Type: %s | ID: %d | Quantity: %d", i, itemType[2], itemId, quantity))
     end
 end
@@ -12603,7 +12592,7 @@ RemoveItem_data:
 dd 00000000
 dd 00000001
 {$lua}
-local func_addr = AOBScanModuleUnique(process,"8b f2 ?? 8b e9 ?? 85 c0 74")
+local func_addr = AOBScanModuleUnique(process,"?? 83 ec ?? 8b f2 ?? 8b e9 ?? 85 c0 74") - 8
 
 function RemoveItem(idx, quantity)
 	if quantity ~= nil or quantity &lt;= 1 then
@@ -49903,6 +49892,183 @@ disableMemrec(memrec)
                 </CheatEntry>
               </CheatEntries>
             </CheatEntry>
+            <CheatEntry>
+              <ID>1337276029</ID>
+              <Description>"Misc"</Description>
+              <Options moHideChildren="1"/>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>1337276030</ID>
+                  <Description>"DLRTClassRTTIFinder - for RE / table developemt"</Description>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>{
+    Author: Dasaav
+    2023-10-09
+}
+{$lua}
+if syntaxcheck then return end
+
+[ENABLE]
+namesVftDLRT = {}
+mutexStructDissectDLRT = mutexStructDissectDLRT or createSemaphore(-1)
+local namesDLRT = {}
+local allVftAddr = {}
+
+local function locateTextSections()
+    local base = getAddress(process)
+    if not base then return nil end
+    local header = base + readInteger(base + 0x3C)
+    local numSections = readShortInteger(header + 0x6) - 1
+    local sections = header + readShortInteger(header + 0x14) + 0x18
+    local result = {}
+    for i=0,numSections do
+        local cur = sections + i * 0x28
+        if readQword(cur) == 0x747865742E then
+            local textSection = {}
+            textSection.beginAddr = base + readInteger(cur + 0xC)
+            textSection.endAddr = textSection.beginAddr + readInteger(cur + 0x8)
+            table.insert(result, textSection)
+        end
+    end
+    return result
+end
+
+local function processDLRTAddress(addrStr)
+    local addr = getAddress(addrStr)
+    if not addr then return end
+    local ppvft = addr + readInteger(addr + 3) + 7
+    local pvft = readPointer(ppvft)
+    if not pvft then return end
+    local vft = readPointer(pvft)
+    local pname = addr + readInteger(addr + 20) + 24
+    local name = readString(pname, 256, false)
+    if vft and name then
+        namesDLRT[vft] = name
+        table.insert(allVftAddr, vft)
+    end
+end
+
+local function processVftAddress(addrStr)
+    local addr = getAddress(addrStr)
+    if not addr then return end
+    if bAnd(readByte(addr + 2), 0x38) ~= bAnd(readByte(addr + 9), 0x38) then return end
+    local vft = addr + readInteger(addr + 3) + 7
+    table.insert(allVftAddr, vft)
+end
+
+local function bindClosestVftNames()
+    table.insert(allVftAddr, 0)
+    table.sort(allVftAddr)
+    for i,addr in ipairs(allVftAddr) do
+        local name = namesDLRT[addr]
+        if name then
+            local closest = allVftAddr[i - 1]
+            if not namesDLRT[closest] then
+                if (addr - closest) &lt; 0x8FF then
+                    namesVftDLRT[closest] = name
+                end
+            end
+        end
+    end
+end
+
+local function registerDLRT()
+    namesDLRT = {}
+    local textSections = locateTextSections()
+    if not textSections then return false end
+    local memscan = createMemScan(nil)
+    createFoundList(memscan)
+    local signature1 = "48 8B 05 ?? ?? ?? ?? 48 85 C0 75 05 E8 ?? ?? ?? ?? 48 8D 0D ?? ?? ?? ?? 48 89 48 38 48 8D 0D ?? ?? ?? ?? 48 89 48 40"
+    for i,section in pairs(textSections) do
+        memscan.firstScan(soExactValue, vtByteArray, rtRounded, signature1, nil, section.beginAddr, section.endAddr, "", fsmNotAligned, nil, true, true, false, false)
+        memscan.waitTillDone()
+        local results = memscan.getAttachedFoundlist()
+        if results then
+            results.initialize()
+            local count = results.getCount() - 1
+            for i=0,count do
+                processDLRTAddress(results.getAddress(i))
+            end
+            results.deinitialize()
+        end
+        memscan.newScan()
+    end
+    local signature2 = "?0001001 00?????? 01001??? ???????? ???????? ???????? ???????? 00???101 10001101 01001???"
+    for i,section in pairs(textSections) do
+        memscan.firstScan(soExactValue, vtBinary, rtRounded, signature2, nil, section.beginAddr, section.endAddr, "", fsmAligned, "1", true, false, false, false)
+        memscan.waitTillDone()
+        local results = memscan.getAttachedFoundlist()
+        if results then
+            results.initialize()
+            local count = results.getCount() - 1
+            for i=0,count do
+                processVftAddress(results.getAddress(i))
+            end
+            results.deinitialize()
+        end
+        memscan.newScan()
+    end
+    bindClosestVftNames()
+    memscan.destroy()
+    return true
+end
+
+function lookupDLRT(address)
+    if not address then return nil end
+    local vft = readPointer(address)
+    if not vft then return nil end
+    return namesVftDLRT[vft]
+end
+
+function sdOverride(structure, address)
+    mutexStructDissectDLRT.acquire()
+    local t = createTimer(getMainForm())
+    local addr = address
+    t.Interval = 100
+    t.OnTimer = function (timer)
+        timer.destroy()
+        if not address then
+            mutexStructDissectDLRT.release()
+            return
+        end
+        local count = structure.Count
+        if count and count &gt; 0 then
+            count = count - 1
+            structure.beginUpdate()
+            for i=0,count do
+                local elem = structure.getElement(i)
+                if elem and elem.getVartype() == vtPointer then
+                    local inst = readPointer(address + elem.getOffset())
+                    local name = lookupDLRT(inst)
+                    if name and elem.getName() == "" then
+                        elem.setName(name)
+                    end
+                end
+            end
+            structure.endUpdate()
+        end
+        mutexStructDissectDLRT.release()
+    end
+    return false
+end
+
+if registerDLRT() then
+    lookupCallback = registerStructureNameLookup(lookupDLRT)
+    sdCallback = registerStructureDissectOverride(sdOverride)
+end
+
+[DISABLE]
+mutexStructDissectDLRT.release()
+sleep(100)
+unregisterStructureNameLookup(lookupCallback)
+unregisterStructureDissectOverride(sdCallback)
+namesVftDLRT = {}
+
+</AssemblerScript>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
           </CheatEntries>
         </CheatEntry>
         <CheatEntry>
@@ -52073,6 +52239,20 @@ int on_disable() {
 542C92B0:IA-C01F: OCELLUS
 542C9314:IB-C03F: WLT 001
 FFFFFFFF:None
+</DropDownList>
+                  <GroupHeader>1</GroupHeader>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>1337276031</ID>
+                  <Description>"ITEM_TYPE"</Description>
+                  <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:Weapon
+1:Protector
+2:Accessory
+4:Goods
+5:Fcs
+6:Booster
+7:Generator
+15:None
 </DropDownList>
                   <GroupHeader>1</GroupHeader>
                 </CheatEntry>

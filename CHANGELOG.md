@@ -1,6 +1,16 @@
 # Changelog
 ## [Unreleased]
 
+## [v0.4.2] - 2023-10-12
+### Added
+ - by [Dasaav](https://github.com/Dasaav-dsv):
+   - Debug Stuff -> Misc -> DLRTClassRTTIFinder - for RE / table development
+### Changed
+ - Supported game version to executable 1.04 / app ver. 40
+ - EquipInventoryData dropdowns and script
+ - Renamed "Weapon Info" to ChrWeaponModule
+ - RemoveItem AOB improved
+
 ## [v0.4.1] - 2023-09-22
 ### Changed
  - Supported game version to executable 1.02 / app ver. 30
