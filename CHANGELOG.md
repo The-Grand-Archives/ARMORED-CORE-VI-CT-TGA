@@ -1,5 +1,7 @@
 # Changelog
 ## [Unreleased]
+### Fixed
+ - Generator type in Print Inventory
 
 ## [v0.4.2] - 2023-10-12
 ### Added

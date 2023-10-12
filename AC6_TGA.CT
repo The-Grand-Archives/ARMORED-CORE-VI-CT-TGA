@@ -6,7 +6,7 @@
   <CheatEntries>
     <CheatEntry>
       <ID>0</ID>
-      <Description>"Open - The Grand Archives v0.4.2 - ARMORED CORE VI v1.04 / App Ver. 40"</Description>
+      <Description>"Open - The Grand Archives v0.4.3 - ARMORED CORE VI v1.04 / App Ver. 40"</Description>
       <Options moHideChildren="1"/>
       <VariableType>Auto Assembler Script</VariableType>
       <AssemblerScript>{$lua}
@@ -27,7 +27,7 @@ end
 
 game_title = "ARMORED CORE VI FIRES OF RUBICON"
 game_ver = "1.04"  -- app ver. 40
-table_ver = 0.042
+table_ver = 0.043
 ce_ver = 7.5
 local version_url = "https://raw.githubusercontent.com/The-Grand-Archives/ARMORED-CORE-VI-CT-TGA/main/VERSION"
 
@@ -12321,6 +12321,8 @@ local function get_type(id)
 
     if id &gt;= types.invalid[1] then
         return types.invalid
+    elseif id &gt;= types.generator[1] then
+        return types.generator
     elseif id &gt;= types.booster[1] then
         return types.booster
     elseif id &gt;= types.fcs[1] then
