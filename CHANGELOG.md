@@ -1,5 +1,7 @@
 # Changelog
 ## [Unreleased]
+
+## [v0.4.3] - 2023-12-19
 ### Added
  - Free Camera mode (free camera is not properly usable yet)
  - New v1.05 items added to dropdowns (AddItem, ChrAsm, helpers, etc)

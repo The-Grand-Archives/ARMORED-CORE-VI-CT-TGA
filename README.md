@@ -8,7 +8,7 @@ ARMORED CORE VI FIRES OF RUBICON Cheat Engine table maintained by The Grand Arch
 ## Discord
 
 Our community, make sure to read the rules carefully.  
-[The Grand Archives](https://discord.io/the-grand-archives)  
+[The Grand Archives](https://dsc.gg/the-grand-archives)  
 
 If it doesn't work, try this [alternative invite](https://discord.gg/2RTW6BFgeX)
 
@@ -20,7 +20,7 @@ If it doesn't work, try this [alternative invite](https://discord.gg/2RTW6BFgeX)
 ### Requirements
 
 Cheat Engine: [7.5](https://github.com/cheat-engine/cheat-engine/releases)  
-Game: Executable v1.04 / App Ver. 40
+Game: Executable v1.05 / App Ver. 50
 
 ## How to use
 
