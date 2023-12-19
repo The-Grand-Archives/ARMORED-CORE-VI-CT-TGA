@@ -1,5 +1,11 @@
 # Changelog
 ## [Unreleased]
+### Added
+ - Free Camera mode (free camera is not properly usable yet)
+ - New v1.05 items added to dropdowns (AddItem, ChrAsm, helpers, etc)
+### Changed
+ - Minor cleanup
+ - Supported game version to executable 1.05 / app ver. 50
 ### Fixed
  - Generator type in Print Inventory
 

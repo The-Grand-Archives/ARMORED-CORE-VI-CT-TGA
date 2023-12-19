@@ -6,7 +6,7 @@
   <CheatEntries>
     <CheatEntry>
       <ID>0</ID>
-      <Description>"Open - The Grand Archives v0.4.3 - ARMORED CORE VI v1.04 / App Ver. 40"</Description>
+      <Description>"Open - The Grand Archives v0.4.3 - ARMORED CORE VI v1.05 / App Ver. 50"</Description>
       <Options moHideChildren="1"/>
       <VariableType>Auto Assembler Script</VariableType>
       <AssemblerScript>{$lua}
@@ -26,7 +26,7 @@ if not getAddressSafe(process) then
 end
 
 game_title = "ARMORED CORE VI FIRES OF RUBICON"
-game_ver = "1.04"  -- app ver. 40
+game_ver = "1.05"  -- app ver. 50
 table_ver = 0.043
 ce_ver = 7.5
 local version_url = "https://raw.githubusercontent.com/The-Grand-Archives/ARMORED-CORE-VI-CT-TGA/main/VERSION"
@@ -441,32 +441,11 @@ addCIncludePath(tga.path .. '/include')
 -- symbolName = name of the symbol to be registered
 -- AOB = array of bytes to search for in the process module
 -- offset = optional, number of bytes to offset the AOB matching address by
---[[
 tga.baseData = {
-    {symbolName = "GameDataMan", AOB = "48 8B 05 ?? ?? ?? ?? 48 85 C0 74 05 48 8B 40 58 C3 C3"},
-    --{symbolName = "WorldChrMan", AOB = "48 8B 05 ?? ?? ?? ?? 48 85 C0 74 0F 48 39 88"},
-    {symbolName = "GameMan", AOB = "48 8B 05 ?? ?? ?? ?? 80 B8 ?? ?? ?? ?? 0D 0F 94 C0 C3"},
-    {symbolName = "FieldArea", AOB = "48 8B 3D ???????? 49 8B D8 48 8B F2 4C 8B F1 48 85 FF"},
-    --{symbolName = "SoloParamRepository", AOB = "48 89 5C 24 48 8B FA 48 8B D9 C7 44 24 20 00 00 00 00 48", offset = 18},
-    --{symbolName = "CSNetMan", AOB = "48 8B 0D ?? ?? ?? ?? 48 85 C9 74 5E 48 8B 89 ?? ?? ?? ?? B2 01"},
-    --{symbolName = "WorldChrManDbg", AOB = "48 8B 0D ?? ?? ?? ?? 89 5C 24 20 48 85 C9 74 12 B8 ?? ?? ?? ?? 8B D8"},
-    --{symbolName = "CSMenuMan", AOB = "48 8B 05 ?? ?? ?? ?? 33 DB 48 89 74 24"},
-    {symbolName = "MsgRepository", AOB = "48 8B 3D ?? ?? ?? ?? 44 0F B6 30 48 85 FF 75"},
-    --{symbolName = "MapItemMan", AOB = "48 8B 0D ?? ?? ?? ?? C7 44 24 50 FF FF FF FF"},
-    --{symbolName = "ThrowMan", AOB = "41 8B 07 66 0F 7E CF 89 7C 24 ?? 0B C7 33 DB A8", offset = -36},
-    --{symbolName = "CSTrophy", AOB = "0F 84 ?? ?? ?? ?? 8B 00 89 44 24", offset = -10},
-    --{symbolName = "CSWindow", AOB = "48 8B 0D ?? ?? ?? ?? 48 85 C9 74 ?? 48 83 C1 ?? 48 8D 45"},
-    --{symbolName = "CSFlipper", AOB = "48 8B 0D ?? ?? ?? ?? 80 BB ?? ?? ?? ?? 00 0F 84"},
-    --{symbolName = "CSSessionManager", AOB = "48 8B 05 ?? ?? ?? ?? 48 89 9C 24 ?? ?? ?? ?? 48 89 B4 24"},
-    --{symbolName = "CSRemo", AOB = "48 85 C0 74 ?? 80 B8 ?? ?? ?? ?? 00 0F B6 DB 0F 45 DF 48 8B 0D", offset = 18},
-    --{symbolName = "CSLuaEventManager", AOB = "48 83 3D ?? ?? ?? ?? 00 48 8B F9 0F 84 ?? ?? ?? ?? 48"},
-    --{symbolName = "CSRegulationManager", AOB = "48 8B 0D ?? ?? ?? ?? 48 85 C9 74 0B 4C 8B C0 48 8B D7"},
-    --{symbolName = "DamageCtrl", AOB = "48 8B 05 ?? ?? ?? ?? 49 8B D9 49 8B F8 48 8B F2 48 85 C0 75 2E"},
-    --{symbolName = "CSFD4VirtualMemoryFlag", AOB = "48 8B 3D ???????? 48 85 FF 74 ?? 48 8B 49"}
-}
-]]
-tga.baseData = {
-  {symbolName = "GameDataMan", AOB = "48 8B 05 ?? ?? ?? ?? 48 85 C0 ?? ?? 48 8B 40 ?? C3"},
+  {symbolName = "GameDataMan", AOB = "?? 8B 05 ?? ?? ?? ?? ?? 85 C0 ?? ?? ?? 8B 40 ?? C3"},
+  {symbolName = "GameMan", AOB = "?? 8B 0D ?? ?? ?? ?? E8 ?? ?? ?? ?? 84 C0 74 ?? ?? 8D 44 ?? ?? ?? 89"},
+  {symbolName = "FieldArea", AOB = "?? 8b 0d ?? ?? ?? ?? ?? 85 c9 74 5e ?? 8b 49 18"},
+  --{symbolName = "MsgRepository", AOB = ""},
 }
 
 -- Maps a proper base address name (i.e. name of FD4Singleton) to a set of aliases
@@ -49892,6 +49871,35 @@ disableMemrec(memrec)
                     </CheatEntry>
                   </CheatEntries>
                 </CheatEntry>
+                <CheatEntry>
+                  <ID>1337276035</ID>
+                  <Description>"GAME REND"</Description>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[ENABLE]
+
+[DISABLE]
+
+</AssemblerScript>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>1337215490</ID>
+                      <Description>"Free camera mode | フリーカメラモード"</Description>
+                      <Options moRecursiveSetValue="1"/>
+                      <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:OFF | 無効
+1:ON | 操作
+2:ON (updating) | 操作(ゲーム中の更新あり)
+3:Fixed | 固定
+</DropDownList>
+                      <ShowAsSigned>0</ShowAsSigned>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>FieldArea</Address>
+                      <Offsets>
+                        <Offset>134</Offset>
+                        <Offset>20</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
               </CheatEntries>
             </CheatEntry>
             <CheatEntry>
@@ -51147,6 +51155,8 @@ int on_disable() {
 15020100:MG-014 LUDLOW (L)
 10020200:DF-MG-02 CHANG-CHEN (R)
 15020200:DF-MG-02 CHANG-CHEN (L)
+10020300:WR-0555 Attache (R)
+15020300:WR-0555 Attache (L)
 10030000:DF-GA-08 HU-BEN (R)
 15030000:DF-GA-08 HU-BEN (L)
 10040000:LITTLE GEM (R)
@@ -51219,6 +51229,8 @@ int on_disable() {
 15180000:VP-66EG (L)
 10190000:WS-5000 APERITIF (R)
 15190000:WS-5000 APERITIF (L)
+10300000:PFAU/66D (R)
+15300000:PFAU/66D (L)
 10200000:10200000 (R)
 15220000:15220000 (L)
 20000100:IB-C03W2: WLT 101
@@ -51305,6 +51317,8 @@ int on_disable() {
 35240000:KRANICH/60Z (L)
 30250000:VP-60LCS (R)
 35250000:VP-60LCS (L)
+30250100:VE-60LCB (R)
+35250100:VE-60LCB (L)
 30260000:VP-60LCD (R)
 35260000:VP-60LCD (L)
 30270000:VE-60SNA (R)
@@ -51317,6 +51331,8 @@ int on_disable() {
 35310000:EULE/60D (L)
 30350100:IA-C01W3: AURORA (R)
 35350100:IA-C01W3: AURORA (L)
+30400000:DF-GA-09 SHAO-WEI (R)
+35400000:DF-GA-09 SHAO-WEI (L)
 75000000:ASSAULT ARMOR
 75010000:PULSE ARMOR
 75020000:PULSE PROTECTION
@@ -51335,6 +51351,7 @@ int on_disable() {
 75101100:75101100
 75101200:75101200
 75101300:75101300
+75101400:75101400
 75109000:75109000
 80000000:80000000
 80000100:80000100
@@ -51357,6 +51374,7 @@ int on_disable() {
 80080000:80080000
 80080100:80080100
 80080200:80080200
+80080300:80080300
 95001000:95001000
 95001100:95001100
 95001200:95001200
@@ -51421,6 +51439,7 @@ int on_disable() {
 50080000:IB-C03H: HAL 826
 50080100:IA-C01H: EPHEMERA
 50080200:EL-PH-00 ALBA
+50080300:LAMMERGEIER/44F
 50900000:AH-J-124/RC JAILBREAK
 51000000:BD-011 MELANDER
 51000300:CS-5000 MAIN DISH
@@ -51437,6 +51456,7 @@ int on_disable() {
 51080000:IB-C03C: HAL 826
 51080100:IA-C01C: EPHEMERA
 51080200:EL-PC-00 ALBA
+51080300:LAMMERGEIER/40F
 51800000:51800000
 51900000:AC-J-120/RC JAILBREAK
 52000000:AR-011 MELANDER
@@ -51456,6 +51476,7 @@ int on_disable() {
 52080000:IB-C03A: HAL 826
 52080100:IA-C01A: EPHEMERA
 52080200:EL-PA-00 ALBA
+52080300:LAMMERGEIER/46F
 52900000:AA-J-123/RC JAILBREAK
 53000000:LG-011 MELANDER
 53000300:LG-012 MELANDER C3
@@ -51478,6 +51499,7 @@ int on_disable() {
 53170400:RC-2000 SPRING CHICKEN
 53200000:LG-033M VERRILL
 53230000:VP-424
+53280300:LAMMERGEIER/42F
 53300000:LG-022T BORNEMISSZA
 53340000:VE-42B
 53360000:EL-TL-11 FORTALEZA
@@ -51899,6 +51921,8 @@ int on_disable() {
 00E53044:MG-014 LUDLOW (L)
 0098E568:DF-MG-02 CHANG-CHEN (R)
 00E530A8:DF-MG-02 CHANG-CHEN (L)
+0098E5CC:WR-0555 Attache (R)
+00E5310C:WR-0555 Attache (L)
 00990BB0:DF-GA-08 HU-BEN (R)
 00E556F0:DF-GA-08 HU-BEN (L)
 009932C0:LITTLE GEM (R)
@@ -51971,8 +51995,8 @@ int on_disable() {
 00E7A0E0:VP-66EG (L)
 009B7CB0:WS-5000 APERITIF (R)
 00E7C7F0:WS-5000 APERITIF (L)
-009BA3C0:10200000 (R)
-00E83D20:15220000 (L)
+009D2A60:PFAU/66D (R)
+00E975A0:PFAU/66D (L)
 01312D64:IB-C03W2: WLT 101
 01312DC8:IA-C01W2: MOONLIGHT
 01312E2C:IA-C01W7: ML-REDSHIFT
@@ -52057,6 +52081,8 @@ int on_disable() {
 0219B840:KRANICH/60Z (L)
 01CD9410:VP-60LCS (R)
 0219DF50:VP-60LCS (L)
+01CD9474:VE-60LCB (R)
+0219DFB4:VE-60LCB (L)
 01CDBB20:VP-60LCD (R)
 021A0660:VP-60LCD (L)
 01CDE230:VE-60SNA (R)
@@ -52069,6 +52095,8 @@ int on_disable() {
 021AC9B0:EULE/60D (L)
 01CF1B14:IA-C01W3: AURORA (R)
 021B6654:IA-C01W3: AURORA (L)
+01CFDE00:DF-GA-09 SHAO-WEI (R)
+021C2940:DF-GA-09 SHAO-WEI (L)
 047868C0:ASSAULT ARMOR
 04788FD0:PULSE ARMOR
 0478B6E0:PULSE PROTECTION
@@ -52094,6 +52122,7 @@ int on_disable() {
 12FC2900:IB-C03H: HAL 826
 12FC2964:IA-C01H: EPHEMERA
 12FC29C8:EL-PH-00 ALBA
+12FC2A2C:LAMMERGEIER/44F
 1308AC20:AH-J-124/RC JAILBREAK
 130A32C0:BD-011 MELANDER
 130A33EC:CS-5000 MAIN DISH
@@ -52110,6 +52139,7 @@ int on_disable() {
 130B6B40:IB-C03C: HAL 826
 130B6BA4:IA-C01C: EPHEMERA
 130B6C08:EL-PC-00 ALBA
+130B6C6C:LAMMERGEIER/40F
 1317EE60:AC-J-120/RC JAILBREAK
 13197500:AR-011 MELANDER
 1319762C:AR-012 MELANDER C3
@@ -52128,6 +52158,7 @@ int on_disable() {
 131AAD80:IB-C03A: HAL 826
 131AADE4:IA-C01A: EPHEMERA
 131AAE48:EL-PA-00 ALBA
+131AAEAC:LAMMERGEIER/46F
 132730A0:AA-J-123/RC JAILBREAK
 1328B740:LG-011 MELANDER
 1328B86C:LG-012 MELANDER C3
@@ -52150,6 +52181,7 @@ int on_disable() {
 132B50E0:RC-2000 SPRING CHICKEN
 132BC480:LG-033M VERRILL
 132C39B0:VP-424
+132CFE2C:LAMMERGEIER/42F
 132D4B20:LG-022T BORNEMISSZA
 132DE760:VE-42B
 132E3580:EL-TL-11 FORTALEZA
