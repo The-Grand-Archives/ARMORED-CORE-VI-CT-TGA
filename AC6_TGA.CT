@@ -119,7 +119,7 @@ config.cacheSymbols = true
 config.checkGameLaunched = true
 config.checkGameVersion = true
 config.checkCEVersion = true
-config.checkTableVersion = true
+config.checkTableVersion = false
 config.printProgress = false
 config.hideDebug = false
 cdesc.cacheSymbols = "Save symbols (speeds up lookup)"
@@ -382,6 +382,21 @@ tga:loadSymbolCache()
 --[[END TGA file management]]--
 
 --[[START TGA checks]]--
+
+local function firstTimeSetup()
+	local fts = messageDialog("First Time Setup", [[Do you want this table to check for updates on enabling?
+You can change it later using Configure Table in Table Tools.]], mtConfirmation, mbYes, mbNo, mbCancel)
+	if fts == mrYes then
+		tga.config.checkTableVersion = true
+	elseif fts == mrNo then
+		tga.config.checkTableVersion = false
+	else
+		error("First Time Setup cancelled", 2)
+	end
+	tga:saveConfig()
+  return true
+end
+tga:runOnce("first_time_setup", firstTimeSetup)
 
 if tga.config.checkGameLaunched and not getAddressSafe(process) then
 	local e = "Failed to read game process.\nMake sure you've launched the game without EasyAntiCheat."

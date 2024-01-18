@@ -1,5 +1,7 @@
 # Changelog
 ## [Unreleased]
+### Added
+ - Basic first time setup question for update check
 
 ## [v0.4.3] - 2023-12-19
 ### Added
