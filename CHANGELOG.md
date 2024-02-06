@@ -1,7 +1,12 @@
 # Changelog
 ## [Unreleased]
+
+## [v0.4.4] - 2024-02-06
 ### Added
  - Basic first time setup question for update check
+ - BehaviorParam_PC to Params and Param Helpers (AC6 specific param fields are not mapped)
+### Changed
+ - Supported game version to executable 1.06 / app ver. 60
 
 ## [v0.4.3] - 2023-12-19
 ### Added
@@ -71,8 +76,12 @@
      - WIP! Various ID based helpers, lots of incorrect stuff here
 
 
-[unreleased]: https://github.com/The-Grand-Archives/ARMORED-CORE-VI-CT-TGA/compare/v0.4.0...dev
-[v0.3.0]: https://github.com/inunorii/Elden-Ring-CT-TGA/compare/v0.2.0...v0.4.0
-[v0.2.0]: https://github.com/inunorii/Elden-Ring-CT-TGA/compare/v0.2.0...v0.3.0
+[unreleased]: https://github.com/The-Grand-Archives/ARMORED-CORE-VI-CT-TGA/compare/v0.4.4...dev
+[v0.4.4]: https://github.com/inunorii/Elden-Ring-CT-TGA/compare/v0.4.3...v0.4.4
+[v0.4.3]: https://github.com/inunorii/Elden-Ring-CT-TGA/compare/v0.4.2...v0.4.3
+[v0.4.2]: https://github.com/inunorii/Elden-Ring-CT-TGA/compare/v0.4.1...v0.4.2
+[v0.4.1]: https://github.com/inunorii/Elden-Ring-CT-TGA/compare/v0.4.0...v0.4.1
+[v0.4.0]: https://github.com/inunorii/Elden-Ring-CT-TGA/compare/v0.3.0...v0.4.0
+[v0.3.0]: https://github.com/inunorii/Elden-Ring-CT-TGA/compare/v0.2.0...v0.3.0
 [v0.2.0]: https://github.com/inunorii/Elden-Ring-CT-TGA/compare/v0.1.0...v0.2.0
 [v0.1.0]: https://github.com/inunorii/Elden-Ring-CT-TGA/releases/tag/v0.1.0
