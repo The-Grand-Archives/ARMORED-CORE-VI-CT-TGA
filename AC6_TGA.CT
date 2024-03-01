@@ -12360,6 +12360,25 @@ disableMemrec(memrec)
                     </CheatEntry>
                   </CheatEntries>
                 </CheatEntry>
+                <CheatEntry>
+                  <ID>1337276125</ID>
+                  <Description>"Misc"</Description>
+                  <Options moHideChildren="1"/>
+                  <GroupHeader>1</GroupHeader>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>1337276123</ID>
+                      <Description>"Mission countdown"</Description>
+                      <ShowAsSigned>0</ShowAsSigned>
+                      <VariableType>Float</VariableType>
+                      <Address>GameDataMan</Address>
+                      <Offsets>
+                        <Offset>94</Offset>
+                        <Offset>48</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
               </CheatEntries>
             </CheatEntry>
             <CheatEntry>
@@ -12862,7 +12881,7 @@ dealloc(newmem)
                 </CheatEntry>
                 <CheatEntry>
                   <ID>1337276124</ID>
-                  <Description>"Freeze mission fail timer"</Description>
+                  <Description>"Freeze mission countdown"</Description>
                   <VariableType>Auto Assembler Script</VariableType>
                   <AssemblerScript>[ENABLE]
 aobscanmodule(INJECT,armoredcore6.exe,89 81 94 00 00 00 C3 CC)
@@ -50625,17 +50644,6 @@ unregisterStructureDissectOverride(sdCallback)
 namesVftDLRT = {}
 
 </AssemblerScript>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>1337276123</ID>
-                  <Description>"Mission fail timer"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>Float</VariableType>
-                  <Address>GameDataMan</Address>
-                  <Offsets>
-                    <Offset>94</Offset>
-                    <Offset>48</Offset>
-                  </Offsets>
                 </CheatEntry>
               </CheatEntries>
             </CheatEntry>
