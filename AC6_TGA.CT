@@ -12860,6 +12860,37 @@ db 48 8B CB 8D 14 37
 dealloc(newmem)
 </AssemblerScript>
                 </CheatEntry>
+                <CheatEntry>
+                  <ID>1337276124</ID>
+                  <Description>"Freeze mission fail timer"</Description>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[ENABLE]
+aobscanmodule(INJECT,armoredcore6.exe,89 81 94 00 00 00 C3 CC)
+alloc(newmem,$1000,INJECT)
+
+label(code)
+label(return)
+
+newmem:
+mov eax,[rcx+00000094]
+
+code:
+  mov [rcx+00000094],eax
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+INJECT:
+  db 89 81 94 00 00 00
+unregistersymbol(INJECT)
+dealloc(newmem)
+</AssemblerScript>
+                </CheatEntry>
               </CheatEntries>
             </CheatEntry>
             <CheatEntry>
@@ -50594,6 +50625,17 @@ unregisterStructureDissectOverride(sdCallback)
 namesVftDLRT = {}
 
 </AssemblerScript>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>1337276123</ID>
+                  <Description>"Mission fail timer"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Float</VariableType>
+                  <Address>GameDataMan</Address>
+                  <Offsets>
+                    <Offset>94</Offset>
+                    <Offset>48</Offset>
+                  </Offsets>
                 </CheatEntry>
               </CheatEntries>
             </CheatEntry>

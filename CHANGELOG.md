@@ -1,5 +1,8 @@
 # Changelog
 ## [Unreleased]
+## Added
+ - Mission fail timer in Hero > GameData > Misc
+ - Freeze mission fail timer in Scripts > Cheats
 
 ## [v0.4.4] - 2024-02-06
 ### Added
